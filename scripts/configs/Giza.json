@@ -1,0 +1,12 @@
+
+{
+    "client_name": "Giza",
+    "urls": [
+      "https://wallet.giza.io",
+      "https://api.giza.io"
+    ],
+    "smart_contracts": [
+      "https://github.com/giza/contracts/GizaContract.sol"
+    ]
+  }
+  

@@ -1,0 +1,69 @@
++----------------+         +----------------+         +----------------+         +----------------+         +----------------+         +----------------+
+|  User Initiates|         |  Dispatch Scan |         |  Backend       |         |  Perform       |         |  Data          |         |  AI Prediction |
+|  Scan          +-------->+  Task          +-------->+  Orchestration +-------->+  Scan          +-------->+  Collection    +-------->+  and Validation|
+|                |         |                |         |                |         |                |         |  and Initial   |         |                |
+|                |         |                |         |                |         |                |         |  Analysis      |         |                |
++----------------+         +----------------+         +----------------+         +----------------+         +----------------+         +----------------+
+        |                          |                          |                          |                          |                          |
+        | User selects scan        | Validate scan           | Dispatch scan            | Execute scan             | Parse scan results       | Validate findings
+        | type and parameters      | parameters and          | task to appropriate      | using tools              | Filter noise             | using additional tools
+        |                          | configurations           | module                   | (Nmap, Nikto, etc.)      |                          | (Burp Suite, etc.)
+        v                          v                          v                          v                          v                          v
++----------------+         +----------------+         +----------------+         +----------------+         +----------------+         +----------------+
+|  Generate      |         |  Store and     |         |  User Reviews  |         |  Remediation   |         |  Continuous    |
+|  Report        +-------->+  Notify        +-------->+  Report        +-------->+  Actions       +-------->+  Monitoring    |
+|                |         |                |         |                |         |                |         |                |
++----------------+         +----------------+         +----------------+         +----------------+         +----------------+
+        |                          |                          |                          |                          |
+        | Compile validated        | Store report             | User logs in             | User takes               | Scheduled scans
+        | results into report      | Notify user              | to review report         | necessary actions        | triggered automatically
+        v                          v                          v                          v                          v
++----------------+         +----------------+         +----------------+         +----------------+         +----------------+
+|  Report Stored |         |  User Notified |         |  User Reviews  |         |  User Actions  |         |  AI Agents     |
+|  Securely      +-------->+  via Web       +-------->+  Detailed      +-------->+  Remediation   +-------->+  Monitor for   |
+|                |         |  Interface/Email|        |  Report        |         |  or Request    |         |  New           |
+|                |         |                |         |                |         |  Additional    |         |  Vulnerabilities|
++----------------+         +----------------+         +----------------+         +----------------+         +----------------+
+
+Onchain Points:
++----------------+
+|  Smart Contract|
+|  Scans         |
+|  - Fetch contracts from GitHub |
+|  - Analyze code                |
+|  - Validate vulnerabilities    |
+|                                |
++----------------+
+        |
+        v
++----------------+
+|  Threat Intel  |
+|  Feeds         |
+|  - Onchain data|
+|  - Blockchain  |
+|  - Real-time   |
+|  - Open Source |
+|  - Manual      |
++----------------+
+
+Docker Containerization:
++----------------+
+|  Docker        |
+|  Containers    |
+|  - Burp        |
+|  - Nmap        |
+|  - Nikto       |
+|  - SSLScan     |
+|  - Slither     |
+|  - Echidna     |
+|  - Foundry     |
+|  - Hardhat     |
++----------------+
+        |
+        v
++----------------+
+|  Isolated      |
+|  Environment   |
+|  Consistency   |
+|  Security      |
++----------------+

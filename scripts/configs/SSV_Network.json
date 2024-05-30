@@ -1,0 +1,12 @@
+
+{
+    "client_name": "SSV Network",
+    "urls": [
+      "https://wallet.ssv.network",
+      "https://api.ssv.network"
+    ],
+    "smart_contracts": [
+      "https://github.com/ssv-network/contracts/SSVNetwork.sol"
+    ]
+  }
+  

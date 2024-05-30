@@ -1,0 +1,66 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(() => {
+var exports = {};
+exports.id = "pages/api/vuln-scan";
+exports.ids = ["pages/api/vuln-scan"];
+exports.modules = {
+
+/***/ "dockerode":
+/*!****************************!*\
+  !*** external "dockerode" ***!
+  \****************************/
+/***/ ((module) => {
+
+module.exports = require("dockerode");
+
+/***/ }),
+
+/***/ "next/dist/compiled/next-server/pages-api.runtime.dev.js":
+/*!**************************************************************************!*\
+  !*** external "next/dist/compiled/next-server/pages-api.runtime.dev.js" ***!
+  \**************************************************************************/
+/***/ ((module) => {
+
+module.exports = require("next/dist/compiled/next-server/pages-api.runtime.dev.js");
+
+/***/ }),
+
+/***/ "(api)/./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES_API&page=%2Fapi%2Fvuln-scan&preferredRegion=&absolutePagePath=.%2Fpages%5Capi%5Cvuln-scan.ts&middlewareConfigBase64=e30%3D!":
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES_API&page=%2Fapi%2Fvuln-scan&preferredRegion=&absolutePagePath=.%2Fpages%5Capi%5Cvuln-scan.ts&middlewareConfigBase64=e30%3D! ***!
+  \************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   config: () => (/* binding */ config),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   routeModule: () => (/* binding */ routeModule)\n/* harmony export */ });\n/* harmony import */ var next_dist_server_future_route_modules_pages_api_module_compiled__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/dist/server/future/route-modules/pages-api/module.compiled */ \"(api)/./node_modules/next/dist/server/future/route-modules/pages-api/module.compiled.js\");\n/* harmony import */ var next_dist_server_future_route_modules_pages_api_module_compiled__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_dist_server_future_route_modules_pages_api_module_compiled__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_dist_server_future_route_kind__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/dist/server/future/route-kind */ \"(api)/./node_modules/next/dist/server/future/route-kind.js\");\n/* harmony import */ var next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/dist/build/templates/helpers */ \"(api)/./node_modules/next/dist/build/templates/helpers.js\");\n/* harmony import */ var _pages_api_vuln_scan_ts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages\\api\\vuln-scan.ts */ \"(api)/./pages/api/vuln-scan.ts\");\n\n\n\n// Import the userland code.\n\n// Re-export the handler (should be the default export).\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_api_vuln_scan_ts__WEBPACK_IMPORTED_MODULE_3__, \"default\"));\n// Re-export config.\nconst config = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_api_vuln_scan_ts__WEBPACK_IMPORTED_MODULE_3__, \"config\");\n// Create and export the route module that will be consumed.\nconst routeModule = new next_dist_server_future_route_modules_pages_api_module_compiled__WEBPACK_IMPORTED_MODULE_0__.PagesAPIRouteModule({\n    definition: {\n        kind: next_dist_server_future_route_kind__WEBPACK_IMPORTED_MODULE_1__.RouteKind.PAGES_API,\n        page: \"/api/vuln-scan\",\n        pathname: \"/api/vuln-scan\",\n        // The following aren't used in production.\n        bundlePath: \"\",\n        filename: \"\"\n    },\n    userland: _pages_api_vuln_scan_ts__WEBPACK_IMPORTED_MODULE_3__\n});\n\n//# sourceMappingURL=pages-api.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9ub2RlX21vZHVsZXMvbmV4dC9kaXN0L2J1aWxkL3dlYnBhY2svbG9hZGVycy9uZXh0LXJvdXRlLWxvYWRlci9pbmRleC5qcz9raW5kPVBBR0VTX0FQSSZwYWdlPSUyRmFwaSUyRnZ1bG4tc2NhbiZwcmVmZXJyZWRSZWdpb249JmFic29sdXRlUGFnZVBhdGg9LiUyRnBhZ2VzJTVDYXBpJTVDdnVsbi1zY2FuLnRzJm1pZGRsZXdhcmVDb25maWdCYXNlNjQ9ZTMwJTNEISIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7OztBQUFzRztBQUN2QztBQUNMO0FBQzFEO0FBQ3VEO0FBQ3ZEO0FBQ0EsaUVBQWUsd0VBQUssQ0FBQyxvREFBUSxZQUFZLEVBQUM7QUFDMUM7QUFDTyxlQUFlLHdFQUFLLENBQUMsb0RBQVE7QUFDcEM7QUFDTyx3QkFBd0IsZ0hBQW1CO0FBQ2xEO0FBQ0EsY0FBYyx5RUFBUztBQUN2QjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0FBSztBQUNMLFlBQVk7QUFDWixDQUFDOztBQUVEIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vd2VidHJleS1kYXNoYm9hcmQvPzk2NzkiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgUGFnZXNBUElSb3V0ZU1vZHVsZSB9IGZyb20gXCJuZXh0L2Rpc3Qvc2VydmVyL2Z1dHVyZS9yb3V0ZS1tb2R1bGVzL3BhZ2VzLWFwaS9tb2R1bGUuY29tcGlsZWRcIjtcbmltcG9ydCB7IFJvdXRlS2luZCB9IGZyb20gXCJuZXh0L2Rpc3Qvc2VydmVyL2Z1dHVyZS9yb3V0ZS1raW5kXCI7XG5pbXBvcnQgeyBob2lzdCB9IGZyb20gXCJuZXh0L2Rpc3QvYnVpbGQvdGVtcGxhdGVzL2hlbHBlcnNcIjtcbi8vIEltcG9ydCB0aGUgdXNlcmxhbmQgY29kZS5cbmltcG9ydCAqIGFzIHVzZXJsYW5kIGZyb20gXCIuL3BhZ2VzXFxcXGFwaVxcXFx2dWxuLXNjYW4udHNcIjtcbi8vIFJlLWV4cG9ydCB0aGUgaGFuZGxlciAoc2hvdWxkIGJlIHRoZSBkZWZhdWx0IGV4cG9ydCkuXG5leHBvcnQgZGVmYXVsdCBob2lzdCh1c2VybGFuZCwgXCJkZWZhdWx0XCIpO1xuLy8gUmUtZXhwb3J0IGNvbmZpZy5cbmV4cG9ydCBjb25zdCBjb25maWcgPSBob2lzdCh1c2VybGFuZCwgXCJjb25maWdcIik7XG4vLyBDcmVhdGUgYW5kIGV4cG9ydCB0aGUgcm91dGUgbW9kdWxlIHRoYXQgd2lsbCBiZSBjb25zdW1lZC5cbmV4cG9ydCBjb25zdCByb3V0ZU1vZHVsZSA9IG5ldyBQYWdlc0FQSVJvdXRlTW9kdWxlKHtcbiAgICBkZWZpbml0aW9uOiB7XG4gICAgICAgIGtpbmQ6IFJvdXRlS2luZC5QQUdFU19BUEksXG4gICAgICAgIHBhZ2U6IFwiL2FwaS92dWxuLXNjYW5cIixcbiAgICAgICAgcGF0aG5hbWU6IFwiL2FwaS92dWxuLXNjYW5cIixcbiAgICAgICAgLy8gVGhlIGZvbGxvd2luZyBhcmVuJ3QgdXNlZCBpbiBwcm9kdWN0aW9uLlxuICAgICAgICBidW5kbGVQYXRoOiBcIlwiLFxuICAgICAgICBmaWxlbmFtZTogXCJcIlxuICAgIH0sXG4gICAgdXNlcmxhbmRcbn0pO1xuXG4vLyMgc291cmNlTWFwcGluZ1VSTD1wYWdlcy1hcGkuanMubWFwIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES_API&page=%2Fapi%2Fvuln-scan&preferredRegion=&absolutePagePath=.%2Fpages%5Capi%5Cvuln-scan.ts&middlewareConfigBase64=e30%3D!\n");
+
+/***/ }),
+
+/***/ "(api)/./pages/api/vuln-scan.ts":
+/*!********************************!*\
+  !*** ./pages/api/vuln-scan.ts ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var dockerode__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! dockerode */ \"dockerode\");\n/* harmony import */ var dockerode__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(dockerode__WEBPACK_IMPORTED_MODULE_0__);\n\n// Connect to Docker daemon via TCP\nconst docker = new (dockerode__WEBPACK_IMPORTED_MODULE_0___default())({\n    host: \"localhost\",\n    port: 2375\n});\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (async (req, res)=>{\n    try {\n        const container = docker.getContainer(\"webtrey_vm\");\n        // Execute command in the container\n        const exec = await container.exec({\n            Cmd: [\n                \"/giza_venv/bin/python\",\n                \"/app/vuln_scan.py\"\n            ],\n            AttachStdout: true,\n            AttachStderr: true,\n            Tty: true\n        });\n        exec.start({\n            hijack: true,\n            stdin: true\n        }, (err, stream)=>{\n            if (err) {\n                return res.status(500).json({\n                    error: err.message\n                });\n            }\n            let output = \"\";\n            stream.on(\"data\", (data)=>{\n                output += data.toString();\n            });\n            stream.on(\"end\", ()=>{\n                res.setHeader(\"Content-Type\", \"application/json\");\n                res.status(200).json({\n                    output\n                });\n            });\n        });\n    } catch (error) {\n        res.status(500).json({\n            error: error.message\n        });\n    }\n});\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvdnVsbi1zY2FuLnRzIiwibWFwcGluZ3MiOiI7Ozs7OztBQUMrQjtBQUUvQixtQ0FBbUM7QUFDbkMsTUFBTUMsU0FBUyxJQUFJRCxrREFBTUEsQ0FBQztJQUFFRSxNQUFNO0lBQWFDLE1BQU07QUFBSztBQUUxRCxpRUFBZSxPQUFPQyxLQUFxQkM7SUFDekMsSUFBSTtRQUNGLE1BQU1DLFlBQVlMLE9BQU9NLFlBQVksQ0FBQztRQUV0QyxtQ0FBbUM7UUFDbkMsTUFBTUMsT0FBTyxNQUFNRixVQUFVRSxJQUFJLENBQUM7WUFDaENDLEtBQUs7Z0JBQUM7Z0JBQXlCO2FBQW9CO1lBQ25EQyxjQUFjO1lBQ2RDLGNBQWM7WUFDZEMsS0FBSztRQUNQO1FBRUFKLEtBQUtLLEtBQUssQ0FBQztZQUFFQyxRQUFRO1lBQU1DLE9BQU87UUFBSyxHQUFHLENBQUNDLEtBQUtDO1lBQzlDLElBQUlELEtBQUs7Z0JBQ1AsT0FBT1gsSUFBSWEsTUFBTSxDQUFDLEtBQUtDLElBQUksQ0FBQztvQkFBRUMsT0FBT0osSUFBSUssT0FBTztnQkFBQztZQUNuRDtZQUVBLElBQUlDLFNBQVM7WUFDYkwsT0FBT00sRUFBRSxDQUFDLFFBQVEsQ0FBQ0M7Z0JBQ2pCRixVQUFVRSxLQUFLQyxRQUFRO1lBQ3pCO1lBRUFSLE9BQU9NLEVBQUUsQ0FBQyxPQUFPO2dCQUNmbEIsSUFBSXFCLFNBQVMsQ0FBQyxnQkFBZ0I7Z0JBQzlCckIsSUFBSWEsTUFBTSxDQUFDLEtBQUtDLElBQUksQ0FBQztvQkFBRUc7Z0JBQU87WUFDaEM7UUFDRjtJQUNGLEVBQUUsT0FBT0YsT0FBTztRQUNkZixJQUFJYSxNQUFNLENBQUMsS0FBS0MsSUFBSSxDQUFDO1lBQUVDLE9BQU9BLE1BQU1DLE9BQU87UUFBQztJQUM5QztBQUNGLEdBQUUiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly93ZWJ0cmV5LWRhc2hib2FyZC8uL3BhZ2VzL2FwaS92dWxuLXNjYW4udHM/ZjM2NSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBOZXh0QXBpUmVxdWVzdCwgTmV4dEFwaVJlc3BvbnNlIH0gZnJvbSAnbmV4dCc7XHJcbmltcG9ydCBEb2NrZXIgZnJvbSAnZG9ja2Vyb2RlJztcclxuXHJcbi8vIENvbm5lY3QgdG8gRG9ja2VyIGRhZW1vbiB2aWEgVENQXHJcbmNvbnN0IGRvY2tlciA9IG5ldyBEb2NrZXIoeyBob3N0OiAnbG9jYWxob3N0JywgcG9ydDogMjM3NSB9KTtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGFzeW5jIChyZXE6IE5leHRBcGlSZXF1ZXN0LCByZXM6IE5leHRBcGlSZXNwb25zZSkgPT4ge1xyXG4gIHRyeSB7XHJcbiAgICBjb25zdCBjb250YWluZXIgPSBkb2NrZXIuZ2V0Q29udGFpbmVyKCd3ZWJ0cmV5X3ZtJyk7XHJcblxyXG4gICAgLy8gRXhlY3V0ZSBjb21tYW5kIGluIHRoZSBjb250YWluZXJcclxuICAgIGNvbnN0IGV4ZWMgPSBhd2FpdCBjb250YWluZXIuZXhlYyh7XHJcbiAgICAgIENtZDogWycvZ2l6YV92ZW52L2Jpbi9weXRob24nLCAnL2FwcC92dWxuX3NjYW4ucHknXSxcclxuICAgICAgQXR0YWNoU3Rkb3V0OiB0cnVlLFxyXG4gICAgICBBdHRhY2hTdGRlcnI6IHRydWUsXHJcbiAgICAgIFR0eTogdHJ1ZSxcclxuICAgIH0pO1xyXG5cclxuICAgIGV4ZWMuc3RhcnQoeyBoaWphY2s6IHRydWUsIHN0ZGluOiB0cnVlIH0sIChlcnIsIHN0cmVhbSkgPT4ge1xyXG4gICAgICBpZiAoZXJyKSB7XHJcbiAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNTAwKS5qc29uKHsgZXJyb3I6IGVyci5tZXNzYWdlIH0pO1xyXG4gICAgICB9XHJcblxyXG4gICAgICBsZXQgb3V0cHV0ID0gJyc7XHJcbiAgICAgIHN0cmVhbS5vbignZGF0YScsIChkYXRhKSA9PiB7XHJcbiAgICAgICAgb3V0cHV0ICs9IGRhdGEudG9TdHJpbmcoKTtcclxuICAgICAgfSk7XHJcblxyXG4gICAgICBzdHJlYW0ub24oJ2VuZCcsICgpID0+IHtcclxuICAgICAgICByZXMuc2V0SGVhZGVyKCdDb250ZW50LVR5cGUnLCAnYXBwbGljYXRpb24vanNvbicpO1xyXG4gICAgICAgIHJlcy5zdGF0dXMoMjAwKS5qc29uKHsgb3V0cHV0IH0pO1xyXG4gICAgICB9KTtcclxuICAgIH0pO1xyXG4gIH0gY2F0Y2ggKGVycm9yKSB7XHJcbiAgICByZXMuc3RhdHVzKDUwMCkuanNvbih7IGVycm9yOiBlcnJvci5tZXNzYWdlIH0pO1xyXG4gIH1cclxufTtcclxuIl0sIm5hbWVzIjpbIkRvY2tlciIsImRvY2tlciIsImhvc3QiLCJwb3J0IiwicmVxIiwicmVzIiwiY29udGFpbmVyIiwiZ2V0Q29udGFpbmVyIiwiZXhlYyIsIkNtZCIsIkF0dGFjaFN0ZG91dCIsIkF0dGFjaFN0ZGVyciIsIlR0eSIsInN0YXJ0IiwiaGlqYWNrIiwic3RkaW4iLCJlcnIiLCJzdHJlYW0iLCJzdGF0dXMiLCJqc29uIiwiZXJyb3IiLCJtZXNzYWdlIiwib3V0cHV0Iiwib24iLCJkYXRhIiwidG9TdHJpbmciLCJzZXRIZWFkZXIiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./pages/api/vuln-scan.ts\n");
+
+/***/ })
+
+};
+;
+
+// load runtime
+var __webpack_require__ = require("../../webpack-api-runtime.js");
+__webpack_require__.C(exports);
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/next"], () => (__webpack_exec__("(api)/./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES_API&page=%2Fapi%2Fvuln-scan&preferredRegion=&absolutePagePath=.%2Fpages%5Capi%5Cvuln-scan.ts&middlewareConfigBase64=e30%3D!")));
+module.exports = __webpack_exports__;
+
+})();

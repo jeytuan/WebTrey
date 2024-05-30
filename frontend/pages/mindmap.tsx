@@ -1,5 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
+import 'reactflow/dist/style.css';
 
 const Mindmap = dynamic(() => import('../components/Mindmap'), { ssr: false });
 

@@ -1,3 +1,5 @@
+/* webtrey-dashboard/frontend/app/globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -31,5 +33,30 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .vuln-scan-container {
+    padding: 20px;
+  }
+
+  .scan-result {
+    margin-top: 20px;
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .logs-container {
+    margin-top: 20px;
+  }
+
+  .log-content {
+    white-space: pre-wrap;
+    background: #272822;
+    color: #f8f8f2;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: auto;
+    max-height: 400px;
   }
 }

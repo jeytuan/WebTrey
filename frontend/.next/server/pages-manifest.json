@@ -2,8 +2,10 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/vuln-scan": "pages/vuln-scan.js",
+  "/bounties/zkSync": "pages/bounties/zkSync.js",
+  "/ai-agents": "pages/ai-agents.js",
+  "/bounties": "pages/bounties.js",
   "/hunting": "pages/hunting.js",
-  "/bounties/[programName]": "pages/bounties/[programName].js",
-  "/dashboard": "pages/dashboard.js",
-  "/bounties/zkSync": "pages/bounties/zkSync.js"
+  "/api/vuln-scan": "pages/api/vuln-scan.js"
 }

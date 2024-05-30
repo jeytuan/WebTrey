@@ -28,6 +28,21 @@
       ],
       "@/styles/*": [
         "styles/*"
+      ],
+      "@/app/*": [
+        "app/*"
+      ],
+      "@/lib/*": [
+        "lib/*"
+      ],
+      "@/myenv/*": [
+        "myenv/*"
+      ],
+      "@/src/*": [
+        "src/*"
+      ],
+      "@/pages/ai-agent/components/*": [
+        "pages/ai-agent/components/*"
       ]
     },
     "plugins": [
@@ -41,7 +56,11 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "frontend/pages/**/*.ts",
+    "frontend/pages/**/*.tsx",
+    "frontend/components/**/*.ts",
+    "frontend/components/**/*.tsx"
   ],
   "exclude": [
     "node_modules"
