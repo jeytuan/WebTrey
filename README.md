@@ -62,9 +62,6 @@ Shodan information
 ## Vulnerability Disclosure Program (VDP) Investigation
 As part of this project, we have also investigated what an in-scope Vulnerability Disclosure Program (VDP) for Giza AI would look like. Our proposed VDP includes a clear scope of assets, a structured reward system based on the severity of vulnerabilities, and a detailed process for reporting and handling vulnerabilities. This VDP aims to enhance the security posture of Giza AI by encouraging the identification and responsible disclosure of potential vulnerabilities.
 
-## Conclusion
-
-This project demonstrates a prototype for performing comprehensive OSINT tasks using the Giza SDK. The prototype can be extended and integrated into more extensive security auditing and vulnerability detection platforms.
 
 ### Potential Attack Vectors
 1. Smart Contract Vulnerabilities:
@@ -105,6 +102,7 @@ To pull the Docker image from Docker Hub, use the following command:
 
 ### Running the Docker Container
 To run the Docker container, use the following command:
+
     ```sh
     docker run -d --name webtrey_vm -p 3001:3000 jeytuan/webtrey_vm:latest
     ```
@@ -117,14 +115,14 @@ http://localhost:3001
 To stop the running container, use the following command:
 
     ```sh
-docker stop webtrey_vm
+    docker stop webtrey_vm
     ```
 
 ### Removing the Docker Container
 To remove the container, use the following command:
 
     ```sh
-docker rm webtrey_vm
+    docker rm webtrey_vm
     ```
 
 
@@ -132,10 +130,10 @@ docker rm webtrey_vm
 To update the Docker image to the latest version, use the following commands:
 
     ```sh
-docker pull jeytuan/webtrey_vm:latest
-docker stop webtrey_vm
-docker rm webtrey_vm
-docker run -d --name webtrey_vm -p 3001:3000 jeytuan/webtrey_vm:latest
+    docker pull jeytuan/webtrey_vm:latest
+    docker stop webtrey_vm
+    docker rm webtrey_vm
+    docker run -d --name webtrey_vm -p 3001:3000 jeytuan/webtrey_vm:latest
     ```
 
 # Included Tools
@@ -163,6 +161,11 @@ The integration with Giza AI empowers the WebTrey Dashboard with advanced AI cap
 4. Verifiable Inferences: Ensure the integrity and authenticity of AI predictions with Giza's verifiable machine learning models, providing a higher level of trust and security in automated decision-making processes.
 
 5. Seamless Integration: Easily integrate Giza AI's powerful features into your existing workflows, enhancing your security operations with minimal effort.
+
+## Conclusion
+
+This project demonstrates a prototype for performing comprehensive OSINT tasks using the Giza SDK. The prototype can be extended and integrated into more extensive security auditing and vulnerability detection platforms.
+
 
 # Contributing
 If you wish to contribute to this project, please fork the repository and submit a pull request.
