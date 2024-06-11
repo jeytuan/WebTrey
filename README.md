@@ -1,4 +1,4 @@
-# OSINT Security Action
+# Netsoul WebTrey - Giza OSINT Security Action
 
 ## Overview
 This project uses the Giza SDK to perform an OSINT security action. The action fetches repositories from the Giza GitHub organization, scans them for vulnerabilities, analyzes documentation, retrieves WHOIS information for a domain, and searches Shodan for information on an IP address.
@@ -47,7 +47,7 @@ This project uses the Giza SDK to perform an OSINT security action. The action f
     cd ../../../../frontend
     npm run dev
     ```
-    
+
 ### Web App Dashboard
 The Web App dashboard, built with Next.js, provides a user-friendly interface for managing bug bounties, viewing threat intelligence, and handling vulnerability disclosures.
 
