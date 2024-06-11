@@ -6,27 +6,50 @@ This project uses the Giza SDK to perform an OSINT security action. The action f
 ## Setup
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/your-repo.git
-    cd your-repo
+    git clone https://github.com/jeytuan/WebTrey.git
+    cd WebTrey
     ```
 
 2. Install the required dependencies:
     ```sh
+    cd webtrey-dashboard/backend
+    python -m venv myenv
+    myenv\Scripts\activate  # On Windows
+    source myenv/bin/activate  # On macOS/Linux
     pip install -r requirements.txt
+
     ```
 
-3. Set up environment variables in `.env.local`:
+3. Frontend (Next.js App)
+    ```sh
+    cd ../../frontend
+    npm install
+     ```
+
+
+4. Set up environment variables in `.env.local`:
     ```plaintext
     GITHUB_TOKEN=<your_github_token>
     SHODAN_API_KEY=<your_shodan_api_key>
     SSH_KEY=<your_ssh_key>
     ```
 
-## Usage
-To run the OSINT security action, execute:
-```sh
-python giza_run.py
-```
+## Usage & Running the Applications
+1. Start the Backend OSINT Scan
+    ```sh
+    cd webtrey-dashboard/backend/webtrey/giza
+    myenv\Scripts\activate  # On Windows
+    source myenv/bin/activate  # On macOS/Linux
+    python giza_run.py
+    ```
+2. Start the Frontend Web App
+    ```sh
+    cd ../../../../frontend
+    npm run dev
+    ```
+    
+### Web App Dashboard
+The Web App dashboard, built with Next.js, provides a user-friendly interface for managing bug bounties, viewing threat intelligence, and handling vulnerability disclosures.
 
 ## Results
 The results will include:
