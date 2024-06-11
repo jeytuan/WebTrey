@@ -26,6 +26,7 @@ This project uses the Giza SDK to perform an OSINT security action. The action f
 To run the OSINT security action, execute:
 ```sh
 python giza_run.py
+```
 
 ## Results
 The results will include:
