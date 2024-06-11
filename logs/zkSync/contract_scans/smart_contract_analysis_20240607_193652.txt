@@ -1,0 +1,2350 @@
+[2024-06-07 19:36:52.916187] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/account.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:36:53.826279] Running Slither on dist/backend/scripts/smart_contracts/zkSync/account.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 494, in _run_solc
+    raise InvalidCompilation(f"{filename} is not the expected format '.sol'")
+crytic_compile.platform.exceptions.InvalidCompilation: /contracts/dist/backend/scripts/smart_contracts/zkSync/account.rs is not the expected format '.sol'
+[2024-06-07 19:36:55.522261] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/account.rs
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:36:56.367273] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/account.rs
+Error: "solc" is not found.
+[2024-06-07 19:36:57.130331] Integrating Giza AI
+[2024-06-07 19:36:57.130331] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/AdditionalZkSync.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:36:57.934654] Running Slither on dist/backend/scripts/smart_contracts/zkSync/AdditionalZkSync.sol
+'solc --version' running
+'solc /contracts/dist/backend/scripts/smart_contracts/zkSync/AdditionalZkSync.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/dist/backend/scripts/smart_contracts/zkSync' running
+Compilation warnings/errors on /contracts/dist/backend/scripts/smart_contracts/zkSync/AdditionalZkSync.sol:
+Error: Source file requires different compiler version (current compiler is 0.8.24+commit.e11b9ed9.Linux.g++) - note that nightly builds are considered to be strictly less than the released version
+ --> /contracts/dist/backend/scripts/smart_contracts/zkSync/AdditionalZkSync.sol:3:1:
+  |
+3 | pragma solidity ^0.7.0;
+  | ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Source file requires different compiler version (current compiler is 0.8.24+commit.e11b9ed9.Linux.g++) - note that nightly builds are considered to be strictly less than the released version
+ --> /contracts/dist/backend/scripts/smart_contracts/zkSync/AdditionalZkSync.sol:3:1:
+  |
+3 | pragma solidity ^0.7.0;
+  | ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+[2024-06-07 19:36:59.680494] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/AdditionalZkSync.sol
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:37:00.458372] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/AdditionalZkSync.sol
+Error: "solc" is not found.
+[2024-06-07 19:37:01.247619] Integrating Giza AI
+[2024-06-07 19:37:01.248132] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/allocated_structures.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:37:01.982390] Running Slither on dist/backend/scripts/smart_contracts/zkSync/allocated_structures.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 494, in _run_solc
+    raise InvalidCompilation(f"{filename} is not the expected format '.sol'")
+crytic_compile.platform.exceptions.InvalidCompilation: /contracts/dist/backend/scripts/smart_contracts/zkSync/allocated_structures.rs is not the expected format '.sol'
+[2024-06-07 19:37:03.540683] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/allocated_structures.rs
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:37:04.257795] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/allocated_structures.rs
+Error: "solc" is not found.
+[2024-06-07 19:37:05.083154] Integrating Giza AI
+[2024-06-07 19:37:05.083154] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/change_pubkey_offchain.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:37:05.797312] Running Slither on dist/backend/scripts/smart_contracts/zkSync/change_pubkey_offchain.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 494, in _run_solc
+    raise InvalidCompilation(f"{filename} is not the expected format '.sol'")
+crytic_compile.platform.exceptions.InvalidCompilation: /contracts/dist/backend/scripts/smart_contracts/zkSync/change_pubkey_offchain.rs is not the expected format '.sol'
+[2024-06-07 19:37:07.406960] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/change_pubkey_offchain.rs
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:37:08.193230] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/change_pubkey_offchain.rs
+Error: "solc" is not found.
+[2024-06-07 19:37:09.033911] Integrating Giza AI
+[2024-06-07 19:37:09.033911] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/circuit.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:37:09.755800] Running Slither on dist/backend/scripts/smart_contracts/zkSync/circuit.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 494, in _run_solc
+    raise InvalidCompilation(f"{filename} is not the expected format '.sol'")
+crytic_compile.platform.exceptions.InvalidCompilation: /contracts/dist/backend/scripts/smart_contracts/zkSync/circuit.rs is not the expected format '.sol'
+[2024-06-07 19:37:11.403673] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/circuit.rs
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:37:12.100168] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/circuit.rs
+Error: "solc" is not found.
+[2024-06-07 19:37:12.949165] Integrating Giza AI
+[2024-06-07 19:37:12.949693] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/deposit.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:37:13.664095] Running Slither on dist/backend/scripts/smart_contracts/zkSync/deposit.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 494, in _run_solc
+    raise InvalidCompilation(f"{filename} is not the expected format '.sol'")
+crytic_compile.platform.exceptions.InvalidCompilation: /contracts/dist/backend/scripts/smart_contracts/zkSync/deposit.rs is not the expected format '.sol'
+[2024-06-07 19:37:15.284645] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/deposit.rs
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:37:16.027599] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/deposit.rs
+Error: "solc" is not found.
+[2024-06-07 19:37:16.807060] Integrating Giza AI
+[2024-06-07 19:37:16.807597] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/element.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:37:17.478425] Running Slither on dist/backend/scripts/smart_contracts/zkSync/element.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 494, in _run_solc
+    raise InvalidCompilation(f"{filename} is not the expected format '.sol'")
+crytic_compile.platform.exceptions.InvalidCompilation: /contracts/dist/backend/scripts/smart_contracts/zkSync/element.rs is not the expected format '.sol'
+[2024-06-07 19:37:19.095264] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/element.rs
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:37:19.894913] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/element.rs
+Error: "solc" is not found.
+[2024-06-07 19:37:20.809615] Integrating Giza AI
+[2024-06-07 19:37:20.810141] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/exit_circuit.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:37:21.538710] Running Slither on dist/backend/scripts/smart_contracts/zkSync/exit_circuit.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 494, in _run_solc
+    raise InvalidCompilation(f"{filename} is not the expected format '.sol'")
+crytic_compile.platform.exceptions.InvalidCompilation: /contracts/dist/backend/scripts/smart_contracts/zkSync/exit_circuit.rs is not the expected format '.sol'
+[2024-06-07 19:37:23.334239] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/exit_circuit.rs
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:37:24.182715] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/exit_circuit.rs
+Error: "solc" is not found.
+[2024-06-07 19:37:24.896075] Integrating Giza AI
+[2024-06-07 19:37:24.896607] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/forced_exit.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:37:25.639312] Running Slither on dist/backend/scripts/smart_contracts/zkSync/forced_exit.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 494, in _run_solc
+    raise InvalidCompilation(f"{filename} is not the expected format '.sol'")
+crytic_compile.platform.exceptions.InvalidCompilation: /contracts/dist/backend/scripts/smart_contracts/zkSync/forced_exit.rs is not the expected format '.sol'
+[2024-06-07 19:37:27.222335] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/forced_exit.rs
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:37:27.953851] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/forced_exit.rs
+Error: "solc" is not found.
+[2024-06-07 19:37:28.795951] Integrating Giza AI
+[2024-06-07 19:37:28.796481] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/full_exit.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:37:29.531511] Running Slither on dist/backend/scripts/smart_contracts/zkSync/full_exit.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 494, in _run_solc
+    raise InvalidCompilation(f"{filename} is not the expected format '.sol'")
+crytic_compile.platform.exceptions.InvalidCompilation: /contracts/dist/backend/scripts/smart_contracts/zkSync/full_exit.rs is not the expected format '.sol'
+[2024-06-07 19:37:31.093739] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/full_exit.rs
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:37:31.895301] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/full_exit.rs
+Error: "solc" is not found.
+[2024-06-07 19:37:32.733757] Integrating Giza AI
+[2024-06-07 19:37:32.734468] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/Governance.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:37:33.507064] Running Slither on dist/backend/scripts/smart_contracts/zkSync/Governance.sol
+'solc --version' running
+'solc /contracts/dist/backend/scripts/smart_contracts/zkSync/Governance.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/dist/backend/scripts/smart_contracts/zkSync' running
+Compilation warnings/errors on /contracts/dist/backend/scripts/smart_contracts/zkSync/Governance.sol:
+Error: Source file requires different compiler version (current compiler is 0.8.24+commit.e11b9ed9.Linux.g++) - note that nightly builds are considered to be strictly less than the released version
+ --> /contracts/dist/backend/scripts/smart_contracts/zkSync/Governance.sol:3:1:
+  |
+3 | pragma solidity ^0.7.0;
+  | ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Source file requires different compiler version (current compiler is 0.8.24+commit.e11b9ed9.Linux.g++) - note that nightly builds are considered to be strictly less than the released version
+ --> /contracts/dist/backend/scripts/smart_contracts/zkSync/Governance.sol:3:1:
+  |
+3 | pragma solidity ^0.7.0;
+  | ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+[2024-06-07 19:37:35.294972] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/Governance.sol
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:37:36.076062] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/Governance.sol
+Error: "solc" is not found.
+[2024-06-07 19:37:36.851068] Integrating Giza AI
+[2024-06-07 19:37:36.851068] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/mint_nft.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:37:37.611759] Running Slither on dist/backend/scripts/smart_contracts/zkSync/mint_nft.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 494, in _run_solc
+    raise InvalidCompilation(f"{filename} is not the expected format '.sol'")
+crytic_compile.platform.exceptions.InvalidCompilation: /contracts/dist/backend/scripts/smart_contracts/zkSync/mint_nft.rs is not the expected format '.sol'
+[2024-06-07 19:37:39.229187] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/mint_nft.rs
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:37:40.033437] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/mint_nft.rs
+Error: "solc" is not found.
+[2024-06-07 19:37:40.836606] Integrating Giza AI
+[2024-06-07 19:37:40.837129] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/mod.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:37:41.585966] Running Slither on dist/backend/scripts/smart_contracts/zkSync/mod.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 494, in _run_solc
+    raise InvalidCompilation(f"{filename} is not the expected format '.sol'")
+crytic_compile.platform.exceptions.InvalidCompilation: /contracts/dist/backend/scripts/smart_contracts/zkSync/mod.rs is not the expected format '.sol'
+[2024-06-07 19:37:43.152369] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/mod.rs
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:37:43.987805] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/mod.rs
+Error: "solc" is not found.
+[2024-06-07 19:37:44.816042] Integrating Giza AI
+[2024-06-07 19:37:44.816572] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/noop.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:37:45.515107] Running Slither on dist/backend/scripts/smart_contracts/zkSync/noop.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 494, in _run_solc
+    raise InvalidCompilation(f"{filename} is not the expected format '.sol'")
+crytic_compile.platform.exceptions.InvalidCompilation: /contracts/dist/backend/scripts/smart_contracts/zkSync/noop.rs is not the expected format '.sol'
+[2024-06-07 19:37:47.087656] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/noop.rs
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:37:47.783933] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/noop.rs
+Error: "solc" is not found.
+[2024-06-07 19:37:48.571301] Integrating Giza AI
+[2024-06-07 19:37:48.571836] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/operation.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:37:49.312145] Running Slither on dist/backend/scripts/smart_contracts/zkSync/operation.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 494, in _run_solc
+    raise InvalidCompilation(f"{filename} is not the expected format '.sol'")
+crytic_compile.platform.exceptions.InvalidCompilation: /contracts/dist/backend/scripts/smart_contracts/zkSync/operation.rs is not the expected format '.sol'
+[2024-06-07 19:37:50.877269] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/operation.rs
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:37:51.633945] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/operation.rs
+Error: "solc" is not found.
+[2024-06-07 19:37:52.459200] Integrating Giza AI
+[2024-06-07 19:37:52.459716] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/Proxy.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:37:53.201803] Running Slither on dist/backend/scripts/smart_contracts/zkSync/Proxy.sol
+'solc --version' running
+'solc /contracts/dist/backend/scripts/smart_contracts/zkSync/Proxy.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/dist/backend/scripts/smart_contracts/zkSync' running
+Compilation warnings/errors on /contracts/dist/backend/scripts/smart_contracts/zkSync/Proxy.sol:
+Error: Source file requires different compiler version (current compiler is 0.8.24+commit.e11b9ed9.Linux.g++) - note that nightly builds are considered to be strictly less than the released version
+ --> /contracts/dist/backend/scripts/smart_contracts/zkSync/Proxy.sol:3:1:
+  |
+3 | pragma solidity ^0.7.0;
+  | ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Source file requires different compiler version (current compiler is 0.8.24+commit.e11b9ed9.Linux.g++) - note that nightly builds are considered to be strictly less than the released version
+ --> /contracts/dist/backend/scripts/smart_contracts/zkSync/Proxy.sol:3:1:
+  |
+3 | pragma solidity ^0.7.0;
+  | ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+[2024-06-07 19:37:54.868052] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/Proxy.sol
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:37:55.640362] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/Proxy.sol
+Error: "solc" is not found.
+[2024-06-07 19:37:56.370860] Integrating Giza AI
+[2024-06-07 19:37:56.371512] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/serialization.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:37:57.087970] Running Slither on dist/backend/scripts/smart_contracts/zkSync/serialization.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 494, in _run_solc
+    raise InvalidCompilation(f"{filename} is not the expected format '.sol'")
+crytic_compile.platform.exceptions.InvalidCompilation: /contracts/dist/backend/scripts/smart_contracts/zkSync/serialization.rs is not the expected format '.sol'
+[2024-06-07 19:37:58.725335] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/serialization.rs
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:37:59.537362] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/serialization.rs
+Error: "solc" is not found.
+[2024-06-07 19:38:00.309824] Integrating Giza AI
+[2024-06-07 19:38:00.310381] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/signature.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:38:01.053138] Running Slither on dist/backend/scripts/smart_contracts/zkSync/signature.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 494, in _run_solc
+    raise InvalidCompilation(f"{filename} is not the expected format '.sol'")
+crytic_compile.platform.exceptions.InvalidCompilation: /contracts/dist/backend/scripts/smart_contracts/zkSync/signature.rs is not the expected format '.sol'
+[2024-06-07 19:38:02.633871] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/signature.rs
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:38:03.437012] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/signature.rs
+Error: "solc" is not found.
+[2024-06-07 19:38:04.232410] Integrating Giza AI
+[2024-06-07 19:38:04.232957] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/swap.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:38:04.942826] Running Slither on dist/backend/scripts/smart_contracts/zkSync/swap.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 494, in _run_solc
+    raise InvalidCompilation(f"{filename} is not the expected format '.sol'")
+crytic_compile.platform.exceptions.InvalidCompilation: /contracts/dist/backend/scripts/smart_contracts/zkSync/swap.rs is not the expected format '.sol'
+[2024-06-07 19:38:06.533956] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/swap.rs
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:38:07.265559] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/swap.rs
+Error: "solc" is not found.
+[2024-06-07 19:38:08.055108] Integrating Giza AI
+[2024-06-07 19:38:08.055613] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/TokenGovernance.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:38:08.879912] Running Slither on dist/backend/scripts/smart_contracts/zkSync/TokenGovernance.sol
+'solc --version' running
+'solc /contracts/dist/backend/scripts/smart_contracts/zkSync/TokenGovernance.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/dist/backend/scripts/smart_contracts/zkSync' running
+Compilation warnings/errors on /contracts/dist/backend/scripts/smart_contracts/zkSync/TokenGovernance.sol:
+Error: Source file requires different compiler version (current compiler is 0.8.24+commit.e11b9ed9.Linux.g++) - note that nightly builds are considered to be strictly less than the released version
+ --> /contracts/dist/backend/scripts/smart_contracts/zkSync/TokenGovernance.sol:3:1:
+  |
+3 | pragma solidity ^0.7.0;
+  | ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Source file requires different compiler version (current compiler is 0.8.24+commit.e11b9ed9.Linux.g++) - note that nightly builds are considered to be strictly less than the released version
+ --> /contracts/dist/backend/scripts/smart_contracts/zkSync/TokenGovernance.sol:3:1:
+  |
+3 | pragma solidity ^0.7.0;
+  | ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+[2024-06-07 19:38:10.560496] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/TokenGovernance.sol
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:38:11.346361] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/TokenGovernance.sol
+Error: "solc" is not found.
+[2024-06-07 19:38:12.114282] Integrating Giza AI
+[2024-06-07 19:38:12.114821] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/transfer.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:38:12.907493] Running Slither on dist/backend/scripts/smart_contracts/zkSync/transfer.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 494, in _run_solc
+    raise InvalidCompilation(f"{filename} is not the expected format '.sol'")
+crytic_compile.platform.exceptions.InvalidCompilation: /contracts/dist/backend/scripts/smart_contracts/zkSync/transfer.rs is not the expected format '.sol'
+[2024-06-07 19:38:14.539178] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/transfer.rs
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:38:15.352918] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/transfer.rs
+Error: "solc" is not found.
+[2024-06-07 19:38:16.166487] Integrating Giza AI
+[2024-06-07 19:38:16.167074] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/transfer_to_new.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:38:16.961217] Running Slither on dist/backend/scripts/smart_contracts/zkSync/transfer_to_new.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 494, in _run_solc
+    raise InvalidCompilation(f"{filename} is not the expected format '.sol'")
+crytic_compile.platform.exceptions.InvalidCompilation: /contracts/dist/backend/scripts/smart_contracts/zkSync/transfer_to_new.rs is not the expected format '.sol'
+[2024-06-07 19:38:18.522417] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/transfer_to_new.rs
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:38:19.374986] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/transfer_to_new.rs
+Error: "solc" is not found.
+[2024-06-07 19:38:20.272789] Integrating Giza AI
+[2024-06-07 19:38:20.273314] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/UpgradeGatekeeper.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:38:21.097643] Running Slither on dist/backend/scripts/smart_contracts/zkSync/UpgradeGatekeeper.sol
+'solc --version' running
+'solc /contracts/dist/backend/scripts/smart_contracts/zkSync/UpgradeGatekeeper.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/dist/backend/scripts/smart_contracts/zkSync' running
+Compilation warnings/errors on /contracts/dist/backend/scripts/smart_contracts/zkSync/UpgradeGatekeeper.sol:
+Error: Source file requires different compiler version (current compiler is 0.8.24+commit.e11b9ed9.Linux.g++) - note that nightly builds are considered to be strictly less than the released version
+ --> /contracts/dist/backend/scripts/smart_contracts/zkSync/UpgradeGatekeeper.sol:3:1:
+  |
+3 | pragma solidity ^0.7.0;
+  | ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Source file requires different compiler version (current compiler is 0.8.24+commit.e11b9ed9.Linux.g++) - note that nightly builds are considered to be strictly less than the released version
+ --> /contracts/dist/backend/scripts/smart_contracts/zkSync/UpgradeGatekeeper.sol:3:1:
+  |
+3 | pragma solidity ^0.7.0;
+  | ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+[2024-06-07 19:38:22.886792] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/UpgradeGatekeeper.sol
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:38:23.630140] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/UpgradeGatekeeper.sol
+Error: "solc" is not found.
+[2024-06-07 19:38:24.390754] Integrating Giza AI
+[2024-06-07 19:38:24.391731] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/utils.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:38:25.177821] Running Slither on dist/backend/scripts/smart_contracts/zkSync/utils.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 494, in _run_solc
+    raise InvalidCompilation(f"{filename} is not the expected format '.sol'")
+crytic_compile.platform.exceptions.InvalidCompilation: /contracts/dist/backend/scripts/smart_contracts/zkSync/utils.rs is not the expected format '.sol'
+[2024-06-07 19:38:26.781274] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/utils.rs
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:38:27.554263] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/utils.rs
+Error: "solc" is not found.
+[2024-06-07 19:38:28.346129] Integrating Giza AI
+[2024-06-07 19:38:28.346669] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/Verifier.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:38:29.054583] Running Slither on dist/backend/scripts/smart_contracts/zkSync/Verifier.sol
+'solc --version' running
+'solc /contracts/dist/backend/scripts/smart_contracts/zkSync/Verifier.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/dist/backend/scripts/smart_contracts/zkSync' running
+Compilation warnings/errors on /contracts/dist/backend/scripts/smart_contracts/zkSync/Verifier.sol:
+Error: Source file requires different compiler version (current compiler is 0.8.24+commit.e11b9ed9.Linux.g++) - note that nightly builds are considered to be strictly less than the released version
+ --> /contracts/dist/backend/scripts/smart_contracts/zkSync/Verifier.sol:3:1:
+  |
+3 | pragma solidity ^0.7.0;
+  | ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Source file requires different compiler version (current compiler is 0.8.24+commit.e11b9ed9.Linux.g++) - note that nightly builds are considered to be strictly less than the released version
+ --> /contracts/dist/backend/scripts/smart_contracts/zkSync/Verifier.sol:3:1:
+  |
+3 | pragma solidity ^0.7.0;
+  | ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+[2024-06-07 19:38:30.847056] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/Verifier.sol
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:38:31.529931] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/Verifier.sol
+Error: "solc" is not found.
+[2024-06-07 19:38:32.289120] Integrating Giza AI
+[2024-06-07 19:38:32.289120] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/withdraw.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:38:33.064553] Running Slither on dist/backend/scripts/smart_contracts/zkSync/withdraw.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 494, in _run_solc
+    raise InvalidCompilation(f"{filename} is not the expected format '.sol'")
+crytic_compile.platform.exceptions.InvalidCompilation: /contracts/dist/backend/scripts/smart_contracts/zkSync/withdraw.rs is not the expected format '.sol'
+[2024-06-07 19:38:34.771196] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/withdraw.rs
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:38:35.543156] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/withdraw.rs
+Error: "solc" is not found.
+[2024-06-07 19:38:36.361112] Integrating Giza AI
+[2024-06-07 19:38:36.361634] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/withdraw_nft.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:38:37.078017] Running Slither on dist/backend/scripts/smart_contracts/zkSync/withdraw_nft.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 494, in _run_solc
+    raise InvalidCompilation(f"{filename} is not the expected format '.sol'")
+crytic_compile.platform.exceptions.InvalidCompilation: /contracts/dist/backend/scripts/smart_contracts/zkSync/withdraw_nft.rs is not the expected format '.sol'
+[2024-06-07 19:38:38.679058] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/withdraw_nft.rs
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:38:39.485654] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/withdraw_nft.rs
+Error: "solc" is not found.
+[2024-06-07 19:38:40.352573] Integrating Giza AI
+[2024-06-07 19:38:40.353113] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/ZkSync.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:38:41.128057] Running Slither on dist/backend/scripts/smart_contracts/zkSync/ZkSync.sol
+'solc --version' running
+'solc /contracts/dist/backend/scripts/smart_contracts/zkSync/ZkSync.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/dist/backend/scripts/smart_contracts/zkSync' running
+Compilation warnings/errors on /contracts/dist/backend/scripts/smart_contracts/zkSync/ZkSync.sol:
+Error: Source file requires different compiler version (current compiler is 0.8.24+commit.e11b9ed9.Linux.g++) - note that nightly builds are considered to be strictly less than the released version
+ --> /contracts/dist/backend/scripts/smart_contracts/zkSync/ZkSync.sol:3:1:
+  |
+3 | pragma solidity ^0.7.0;
+  | ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Source file requires different compiler version (current compiler is 0.8.24+commit.e11b9ed9.Linux.g++) - note that nightly builds are considered to be strictly less than the released version
+ --> /contracts/dist/backend/scripts/smart_contracts/zkSync/ZkSync.sol:3:1:
+  |
+3 | pragma solidity ^0.7.0;
+  | ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+[2024-06-07 19:38:42.959127] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/ZkSync.sol
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:38:43.798346] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/ZkSync.sol
+Error: "solc" is not found.
+[2024-06-07 19:38:44.616670] Integrating Giza AI
+[2024-06-07 19:38:44.617194] Running Echidna on dist/backend/scripts/smart_contracts/zkSync/ZkSyncNFTFactory.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 19:38:45.358923] Running Slither on dist/backend/scripts/smart_contracts/zkSync/ZkSyncNFTFactory.sol
+'solc --version' running
+'solc /contracts/dist/backend/scripts/smart_contracts/zkSync/ZkSyncNFTFactory.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/dist/backend/scripts/smart_contracts/zkSync' running
+Compilation warnings/errors on /contracts/dist/backend/scripts/smart_contracts/zkSync/ZkSyncNFTFactory.sol:
+Error: Source file requires different compiler version (current compiler is 0.8.24+commit.e11b9ed9.Linux.g++) - note that nightly builds are considered to be strictly less than the released version
+ --> /contracts/dist/backend/scripts/smart_contracts/zkSync/ZkSyncNFTFactory.sol:3:1:
+  |
+3 | pragma solidity ^0.7.0;
+  | ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Source file requires different compiler version (current compiler is 0.8.24+commit.e11b9ed9.Linux.g++) - note that nightly builds are considered to be strictly less than the released version
+ --> /contracts/dist/backend/scripts/smart_contracts/zkSync/ZkSyncNFTFactory.sol:3:1:
+  |
+3 | pragma solidity ^0.7.0;
+  | ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+[2024-06-07 19:38:47.136189] Running Foundry on dist/backend/scripts/smart_contracts/zkSync/ZkSyncNFTFactory.sol
+Build, test, fuzz, debug and deploy Solidity contracts
+
+Usage: forge <COMMAND>
+
+Commands:
+  bind               Generate Rust bindings for smart contracts
+  build              Build the project's smart contracts [aliases: b, compile]
+  cache              Manage the Foundry cache
+  clean              Remove the build artifacts and cache directories [aliases: cl]
+  clone              Clone a contract from Etherscan
+  completions        Generate shell completions script [aliases: com]
+  config             Display the current config [aliases: co]
+  coverage           Generate coverage reports
+  create             Deploy a smart contract [aliases: c]
+  debug              Debugs a single smart contract as a script [aliases: d]
+  doc                Generate documentation for the project
+  flatten            Flatten a source file and all of its imports into one file [aliases: f]
+  fmt                Format Solidity source files
+  geiger             Detects usage of unsafe cheat codes in a project and its dependencies
+  generate           Generate scaffold files
+  generate-fig-spec  Generate Fig autocompletion spec [aliases: fig]
+  help               Print this message or the help of the given subcommand(s)
+  init               Create a new Forge project
+  inspect            Get specialized information about a smart contract [aliases: in]
+  install            Install one or multiple dependencies [aliases: i]
+  remappings         Get the automatically inferred remappings for the project [aliases: re]
+  remove             Remove one or multiple dependencies [aliases: rm]
+  script             Run a smart contract as a script, building transactions that can be sent
+                         onchain
+  selectors          Function selector utilities [aliases: se]
+  snapshot           Create a snapshot of each test's gas usage [aliases: s]
+  test               Run the project's tests [aliases: t]
+  tree               Display a tree visualization of the project's dependency graph [aliases:
+                         tr]
+  update             Update one or multiple dependencies [aliases: u]
+  verify-bytecode    Verify the deployed bytecode against its source [aliases: vb]
+  verify-check       Check verification status on Etherscan [aliases: vc]
+  verify-contract    Verify smart contracts on Etherscan [aliases: v]
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+[2024-06-07 19:38:47.953910] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync/ZkSyncNFTFactory.sol
+Error: "solc" is not found.
+[2024-06-07 19:38:48.750010] Integrating Giza AI
+[2024-06-07 19:38:48.750514] Smart contract analysis completed. Results saved to smart_contract_analysis_20240607_193652.txt

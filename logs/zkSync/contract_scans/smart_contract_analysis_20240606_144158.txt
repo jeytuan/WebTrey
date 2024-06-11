@@ -1,0 +1,1736 @@
+[2024-06-06 14:41:58.332707] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit
+[2024-06-06 14:41:59.238844] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'trailofbits/eth-security-toolbox:latest' locally
+latest: Pulling from trailofbits/eth-security-toolbox
+57c139bbda7e: Pulling fs layer
+58f102a73dd1: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+078afcf51a6e: Pulling fs layer
+e9447593c02b: Pulling fs layer
+078afcf51a6e: Waiting
+9cbb32788868: Pulling fs layer
+e9447593c02b: Waiting
+9fffbea0370d: Pulling fs layer
+9cbb32788868: Waiting
+4428506a713a: Pulling fs layer
+9fffbea0370d: Waiting
+4428506a713a: Waiting
+834c587ff671: Pulling fs layer
+834c587ff671: Waiting
+22be2586fac8: Pulling fs layer
+95c78a59e082: Pulling fs layer
+22be2586fac8: Waiting
+d87f0a646083: Pulling fs layer
+95c78a59e082: Waiting
+b52dd89eaaa7: Pulling fs layer
+d87f0a646083: Waiting
+773ab066664f: Pulling fs layer
+6c67c6f6e2b8: Pulling fs layer
+b52dd89eaaa7: Waiting
+773ab066664f: Waiting
+6c67c6f6e2b8: Waiting
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+57c139bbda7e: Download complete
+57c139bbda7e: Pull complete
+e9447593c02b: Verifying Checksum
+e9447593c02b: Download complete
+078afcf51a6e: Verifying Checksum
+078afcf51a6e: Download complete
+9cbb32788868: Verifying Checksum
+9cbb32788868: Download complete
+9fffbea0370d: Verifying Checksum
+4428506a713a: Verifying Checksum
+4428506a713a: Download complete
+834c587ff671: Verifying Checksum
+834c587ff671: Download complete
+95c78a59e082: Verifying Checksum
+95c78a59e082: Download complete
+58f102a73dd1: Verifying Checksum
+58f102a73dd1: Download complete
+b52dd89eaaa7: Verifying Checksum
+b52dd89eaaa7: Download complete
+d87f0a646083: Verifying Checksum
+d87f0a646083: Download complete
+6c67c6f6e2b8: Download complete
+22be2586fac8: Verifying Checksum
+22be2586fac8: Download complete
+58f102a73dd1: Pull complete
+4f4fb700ef54: Pull complete
+078afcf51a6e: Pull complete
+e9447593c02b: Pull complete
+9cbb32788868: Pull complete
+9fffbea0370d: Pull complete
+4428506a713a: Pull complete
+834c587ff671: Pull complete
+22be2586fac8: Pull complete
+95c78a59e082: Pull complete
+d87f0a646083: Pull complete
+b52dd89eaaa7: Pull complete
+773ab066664f: Pull complete
+6c67c6f6e2b8: Pull complete
+Digest: sha256:e031dc98f706934dd8fb1bcdf10214a8250028fe45a3865bbc6fd2bb687e7476
+Status: Downloaded newer image for trailofbits/eth-security-toolbox:latest
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:42:41.965923] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:42:45.664047] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:42:46.846321] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:42:48.098977] Integrating Giza AI
+[2024-06-06 14:42:48.099494] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/circuit.rs
+[2024-06-06 14:42:49.742269] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:42:55.323293] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:42:57.127979] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:42:58.380563] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:42:59.606014] Integrating Giza AI
+[2024-06-06 14:42:59.606537] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/exit_circuit.rs
+[2024-06-06 14:43:00.641718] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:43:01.404937] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:43:03.151452] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:43:04.490115] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:43:05.714205] Integrating Giza AI
+[2024-06-06 14:43:05.714788] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/mod.rs
+[2024-06-06 14:43:06.868146] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:43:07.677054] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:43:09.371040] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:43:10.553034] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:43:11.836785] Integrating Giza AI
+[2024-06-06 14:43:11.836785] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/mint_nft.rs
+[2024-06-06 14:43:12.833428] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:43:13.908980] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:43:15.647654] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:43:16.829907] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:43:18.084530] Integrating Giza AI
+[2024-06-06 14:43:18.086013] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/noop.rs
+[2024-06-06 14:43:19.341549] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:43:20.139071] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:43:21.863775] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:43:23.083680] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:43:24.290091] Integrating Giza AI
+[2024-06-06 14:43:24.290631] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/withdraw.rs
+[2024-06-06 14:43:25.513192] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:43:26.283975] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:43:28.112195] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:43:29.374920] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:43:30.615400] Integrating Giza AI
+[2024-06-06 14:43:30.615400] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/swap.rs
+[2024-06-06 14:43:31.882248] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:43:32.625820] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:43:34.320058] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:43:35.589957] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:43:36.806976] Integrating Giza AI
+[2024-06-06 14:43:36.806976] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/withdraw_nft.rs
+[2024-06-06 14:43:37.999387] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:43:38.713238] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:43:40.427985] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:43:41.794986] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:43:43.058592] Integrating Giza AI
+[2024-06-06 14:43:43.059112] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/deposit.rs
+[2024-06-06 14:43:44.191781] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:43:44.920390] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:43:46.608898] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:43:47.976527] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:43:49.262361] Integrating Giza AI
+[2024-06-06 14:43:49.262886] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/transfer.rs
+[2024-06-06 14:43:50.184038] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:43:50.961256] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:43:52.656286] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:43:53.974351] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:43:55.172013] Integrating Giza AI
+[2024-06-06 14:43:55.172580] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/transfer_to_new.rs
+[2024-06-06 14:43:56.364534] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:43:57.086824] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:43:58.864901] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:44:00.091375] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:44:01.293489] Integrating Giza AI
+[2024-06-06 14:44:01.294026] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/forced_exit.rs
+[2024-06-06 14:44:02.453038] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:44:03.120775] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:44:04.771599] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:44:06.075417] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:44:07.351710] Integrating Giza AI
+[2024-06-06 14:44:07.352243] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/change_pubkey_offchain.rs
+[2024-06-06 14:44:08.488290] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:44:09.157890] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:44:10.928098] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:44:12.282005] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:44:13.482758] Integrating Giza AI
+[2024-06-06 14:44:13.483311] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/full_exit.rs
+[2024-06-06 14:44:14.595466] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:44:15.334288] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:44:17.030034] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:44:18.343700] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:44:19.576154] Integrating Giza AI
+[2024-06-06 14:44:19.576675] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/utils.rs
+[2024-06-06 14:44:20.852618] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:44:21.681069] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:44:23.435832] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:44:24.630581] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:44:25.856028] Integrating Giza AI
+[2024-06-06 14:44:25.856611] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/allocated_structures.rs
+[2024-06-06 14:44:26.897053] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:44:27.670558] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:44:29.376767] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:44:30.595481] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:44:31.854864] Integrating Giza AI
+[2024-06-06 14:44:31.855420] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/utils.rs
+[2024-06-06 14:44:33.096867] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:44:33.897010] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:44:35.656667] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:44:36.998206] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:44:38.283045] Integrating Giza AI
+[2024-06-06 14:44:38.283045] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/account.rs
+[2024-06-06 14:44:39.345014] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:44:40.093864] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:44:41.895287] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:44:43.264138] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:44:44.488496] Integrating Giza AI
+[2024-06-06 14:44:44.489072] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/element.rs
+[2024-06-06 14:44:45.492863] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:44:46.184325] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:44:47.887638] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:44:49.159380] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:44:50.403203] Integrating Giza AI
+[2024-06-06 14:44:50.403771] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/signature.rs
+[2024-06-06 14:44:51.624347] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:44:52.353194] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:44:54.121875] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:44:55.353234] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:44:56.669078] Integrating Giza AI
+[2024-06-06 14:44:56.669078] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/serialization.rs
+[2024-06-06 14:44:58.037208] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:44:58.684778] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:45:00.455264] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:45:01.712171] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:45:03.355266] Integrating Giza AI
+[2024-06-06 14:45:03.355789] Downloading Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/operation.rs
+[2024-06-06 14:45:04.521959] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:45:05.237230] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:45:06.968428] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:45:08.325252] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:45:09.539372] Integrating Giza AI
+[2024-06-06 14:45:09.539920] Downloading Smart Contract: https://github.com/matter-labs/zksync/blob/breaking/contracts/contracts/UpgradeGatekeeper.sol
+[2024-06-06 14:45:10.408840] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:45:11.174639] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:45:12.995142] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:45:14.230103] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:45:15.459350] Integrating Giza AI
+[2024-06-06 14:45:15.459923] Downloading Smart Contract: https://github.com/matter-labs/zksync/blob/breaking/contracts/contracts/Proxy.sol
+[2024-06-06 14:45:16.249795] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:45:16.981763] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:45:18.645965] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:45:19.975129] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:45:21.216517] Integrating Giza AI
+[2024-06-06 14:45:21.216547] Downloading Smart Contract: https://github.com/matter-labs/zksync/blob/breaking/contracts/contracts/ZkSync.sol
+[2024-06-06 14:45:21.946115] Running Echidna on smart_contracts/temp_contract_20240606_144158.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-06 14:45:22.735273] Running Slither on smart_contracts/temp_contract_20240606_144158.sol
+'solc --version' running
+'solc /contracts/smart_contracts/temp_contract_20240606_144158.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/contracts/smart_contracts' running
+Compilation warnings/errors on /contracts/smart_contracts/temp_contract_20240606_144158.sol:
+Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 582, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 718, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 207, in __init__
+    self._compile(**kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 629, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 151, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 280, in _get_targets_json
+    return _run_solc(
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/platform/solc.py", line 586, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.
+ --> /contracts/smart_contracts/temp_contract_20240606_144158.sol:7:1:
+  |
+7 | <!DOCTYPE html>
+  | ^
+
+
+[2024-06-06 14:45:24.425106] Running Foundry on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:45:25.688822] Running Hardhat on smart_contracts/temp_contract_20240606_144158.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-06 14:45:26.918935] Integrating Giza AI
+[2024-06-06 14:45:26.919505] Downloading Smart Contract: https://github.com/matter-labs/zksync/blob/breaking/contracts/contracts/AdditionalZkSync.sol

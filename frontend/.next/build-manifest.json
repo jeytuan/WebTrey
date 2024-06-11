@@ -25,16 +25,6 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/bounties": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/bounties.js"
-    ],
-    "/bounties/zkSync": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/bounties/zkSync.js"
-    ],
     "/hunting": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",

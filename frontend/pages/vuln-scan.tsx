@@ -1,18 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Logs from '../components/Logs';
 import { Dropdown, Button, Loader, Tab } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 
 const scanOptions = [
-  { key: 'all', value: 'all', text: 'Run All Scans' },
-  { key: 'burp', value: 'burp_scan.py', text: 'Burp Scan' },
-  { key: 'nmap', value: 'nmap_scan.py', text: 'Nmap Scan' },
-  { key: 'nikto', value: 'nikto_scan.py', text: 'Nikto Scan' },
-  { key: 'sslscan', value: 'sslscan.py', text: 'SSLScan' },
-  { key: 'slither', value: 'slither_scan.py', text: 'Slither Scan' },
-  { key: 'echidna', value: 'echidna_scan.py', text: 'Echidna Scan' },
-  { key: 'foundry', value: 'foundry_scan.py', text: 'Foundry Scan' },
-  { key: 'hardhat', value: 'hardhat_scan.py', text: 'Hardhat Scan' }
+  { key: 'url', value: 'url_scans', text: 'URL Scans' },
+  { key: 'contract', value: 'contract_scans', text: 'Contract Scans' },
 ];
 
 const targetOptions = [
@@ -30,26 +22,23 @@ const VulnScanPage: React.FC = () => {
   const [selectedTarget, setSelectedTarget] = useState<string | null>(null);
   const [result, setResult] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const [logs, setLogs] = useState<{ target: string; fileName: string; content: string }[]>([]);
+  const [logs, setLogs] = useState<{ fileName: string; content: string }[]>([]);
   const [activeTab, setActiveTab] = useState<string>('Terminal');
+  const [wsLogs, setWsLogs] = useState<string[]>([]);
 
   useEffect(() => {
-    const loadLogs = async () => {
-      const logFiles = [
-        'zkSync/url_scans/vuln_scan_results_20240526_053917.log',
-        'zkSync/url_scans/vuln_scan_results_20240526_053925.log'
-      ];
-      const fetchedLogs = await Promise.all(
-        logFiles.map(async (file) => {
-          const response = await fetch(`/logs/${file}`);
-          const content = await response.text();
-          return { target: 'zkSync', fileName: file, content };
-        })
-      );
-      setLogs(fetchedLogs);
+    const ws = new WebSocket('ws://localhost:8765');
+
+    ws.onmessage = (event) => {
+      const data = JSON.parse(event.data);
+      if (data.log) {
+        setWsLogs((prevLogs) => [...prevLogs, data.log]);
+      }
     };
 
-    loadLogs();
+    return () => {
+      ws.close();
+    };
   }, []);
 
   const handleScan = async () => {
@@ -60,13 +49,15 @@ const VulnScanPage: React.FC = () => {
 
     setLoading(true);
     setResult(null);
+    setWsLogs([]);
 
     try {
-      const response = await fetch(`/api/vuln-scan?scan=${selectedScan}&target=${selectedTarget}`);
+      const response = await fetch(`/api/vuln-scan?scanType=${selectedScan}&target=${selectedTarget}`);
       const data = await response.json();
 
       if (response.ok) {
-        setResult(data.output);
+        setResult(data.results);
+        setLogs(data.logFiles);
       } else {
         setResult(`Error: ${data.error}`);
       }
@@ -85,29 +76,35 @@ const VulnScanPage: React.FC = () => {
           {loading ? (
             <Loader active inline="centered" />
           ) : (
-            result && (
-              <div className="scan-result">
-                <h2>Scan Result</h2>
-                <pre>{result}</pre>
-              </div>
-            )
+            <>
+              {wsLogs.length > 0 && (
+                <div className="scan-result">
+                  <h2>Real-Time Logs</h2>
+                  <pre>{wsLogs.join('\n')}</pre>
+                </div>
+              )}
+              {result && (
+                <div className="scan-result">
+                  <h2>Scan Results</h2>
+                  <pre>{JSON.stringify(result, null, 2)}</pre>
+                </div>
+              )}
+            </>
           )}
         </Tab.Pane>
       )
     },
-    ...logs
-      .filter(log => log.target === selectedTarget)
-      .map((log, index) => ({
-        menuItem: `Log ${index + 1}`,
-        render: () => (
-          <Tab.Pane key={index}>
-            <h3>{log.fileName}</h3>
-            <pre style={{ whiteSpace: 'pre-wrap', wordWrap: 'break-word', backgroundColor: '#1e1e1e', color: '#d4d4d4', padding: '10px', borderRadius: '5px' }}>
-              {log.content}
-            </pre>
-          </Tab.Pane>
-        )
-      }))
+    ...logs.map((log, index) => ({
+      menuItem: `Log ${index + 1}`,
+      render: () => (
+        <Tab.Pane key={index}>
+          <h3>{log.fileName}</h3>
+          <pre style={{ whiteSpace: 'pre-wrap', wordWrap: 'break-word', backgroundColor: '#1e1e1e', color: '#d4d4d4', padding: '10px', borderRadius: '5px' }}>
+            {log.content}
+          </pre>
+        </Tab.Pane>
+      )
+    }))
   ];
 
   const handleTabChange = (e: React.SyntheticEvent, data: any) => {

@@ -1,0 +1,47 @@
+[2024-06-07 10:21:21.541042] Running Echidna on dist/backend/scripts/smart_contracts/zkSync\account.rs
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 10:21:22.538340] Running Slither on dist/backend/scripts/smart_contracts/zkSync\account.rs
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 745, in compile_all
+    raise ValueError(f"{str(target)} is not a file or directory.")
+ValueError: /contracts/dist/backend/scripts/smart_contracts/zkSync\account.rs is not a file or directory.
+[2024-06-07 10:21:24.658480] Running Foundry on dist/backend/scripts/smart_contracts/zkSync\account.rs
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-07 10:21:26.128750] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync\account.rs
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-07 10:21:27.374327] Integrating Giza AI
+[2024-06-07 10:21:27.374845] Running Echidna on dist/backend/scripts/smart_contracts/zkSync\AdditionalZkSync.sol
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "echidna-test": executable file not found in $PATH: unknown.
+[2024-06-07 10:21:28.239749] Running Slither on dist/backend/scripts/smart_contracts/zkSync\AdditionalZkSync.sol
+Traceback (most recent call last):
+  File "/home/ethsec/.local/bin/slither", line 8, in <module>
+    sys.exit(main())
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 727, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 833, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/ethsec/.local/lib/python3.10/site-packages/slither/__main__.py", line 96, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/ethsec/.local/lib/python3.10/site-packages/crytic_compile/crytic_compile.py", line 745, in compile_all
+    raise ValueError(f"{str(target)} is not a file or directory.")
+ValueError: /contracts/dist/backend/scripts/smart_contracts/zkSync\AdditionalZkSync.sol is not a file or directory.
+[2024-06-07 10:21:30.002864] Running Foundry on dist/backend/scripts/smart_contracts/zkSync\AdditionalZkSync.sol
+Unable to find image 'foundry-rs/foundry:latest' locally
+docker: Error response from daemon: pull access denied for foundry-rs/foundry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-07 10:21:31.240704] Running Hardhat on dist/backend/scripts/smart_contracts/zkSync\AdditionalZkSync.sol
+Unable to find image 'nomiclabs/hardhat:latest' locally
+docker: Error response from daemon: pull access denied for nomiclabs/hardhat, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.

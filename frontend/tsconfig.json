@@ -45,6 +45,7 @@
         "pages/ai-agent/components/*"
       ]
     },
+    "types": ["node", "dockerode"], // Add this line
     "plugins": [
       {
         "name": "next"

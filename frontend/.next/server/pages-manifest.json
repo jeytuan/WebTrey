@@ -3,9 +3,5 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/vuln-scan": "pages/vuln-scan.js",
-  "/bounties/zkSync": "pages/bounties/zkSync.js",
-  "/ai-agents": "pages/ai-agents.js",
-  "/bounties": "pages/bounties.js",
-  "/hunting": "pages/hunting.js",
-  "/api/vuln-scan": "pages/api/vuln-scan.js"
+  "/hunting": "pages/hunting.js"
 }

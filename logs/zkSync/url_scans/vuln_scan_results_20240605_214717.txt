@@ -1,0 +1,151 @@
+[2024-06-05 21:47:17.531314] Scanning URL: wallet.zksync.io
+[2024-06-05 21:47:17.532283] Running Nmap scan on wallet.zksync.io
+Starting Nmap 7.95 ( https://nmap.org ) at 2024-06-06 04:47 UTC
+Failed to resolve "wallet.zksync.io".
+WARNING: No targets were specified, so 0 hosts scanned.
+Nmap done: 0 IP addresses (0 hosts up) scanned in 0.22 seconds
+[2024-06-05 21:47:18.527742] Running Nikto scan on wallet.zksync.io
+Unable to find image 'sullo/nikto:latest' locally
+docker: Error response from daemon: pull access denied for sullo/nikto, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-05 21:47:19.892682] Running SSL scan on wallet.zksync.io
+Unable to find image 'nabla/sslscan:latest' locally
+docker: Error response from daemon: pull access denied for nabla/sslscan, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-05 21:47:21.144927] Completed scanning URL: wallet.zksync.io
+[2024-06-05 21:47:21.145476] Scanning URL: zkscan.io
+[2024-06-05 21:47:21.145987] Running Nmap scan on zkscan.io
+Starting Nmap 7.95 ( https://nmap.org ) at 2024-06-06 04:47 UTC
+Nmap scan report for zkscan.io (199.36.158.100)
+Host is up (0.0090s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE    VERSION
+80/tcp  open  tcpwrapped
+443/tcp open  tcpwrapped
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 19.22 seconds
+[2024-06-05 21:47:41.277713] Running Nikto scan on zkscan.io
+Unable to find image 'sullo/nikto:latest' locally
+docker: Error response from daemon: pull access denied for sullo/nikto, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-05 21:47:45.753452] Running SSL scan on zkscan.io
+Unable to find image 'nabla/sslscan:latest' locally
+docker: Error response from daemon: pull access denied for nabla/sslscan, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-05 21:47:46.986369] Completed scanning URL: zkscan.io
+[2024-06-05 21:47:46.986914] Scanning URL: link.zksync.io
+[2024-06-05 21:47:46.987477] Running Nmap scan on link.zksync.io
+Starting Nmap 7.95 ( https://nmap.org ) at 2024-06-06 04:47 UTC
+Failed to resolve "link.zksync.io".
+WARNING: No targets were specified, so 0 hosts scanned.
+Nmap done: 0 IP addresses (0 hosts up) scanned in 0.20 seconds
+[2024-06-05 21:47:47.934621] Running Nikto scan on link.zksync.io
+Unable to find image 'sullo/nikto:latest' locally
+docker: Error response from daemon: pull access denied for sullo/nikto, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-05 21:47:49.166743] Running SSL scan on link.zksync.io
+Unable to find image 'nabla/sslscan:latest' locally
+docker: Error response from daemon: pull access denied for nabla/sslscan, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-05 21:47:50.482104] Completed scanning URL: link.zksync.io
+[2024-06-05 21:47:50.482619] Scanning URL: withdraw.zksync.io
+[2024-06-05 21:47:50.482645] Running Nmap scan on withdraw.zksync.io
+Starting Nmap 7.95 ( https://nmap.org ) at 2024-06-06 04:47 UTC
+Nmap scan report for withdraw.zksync.io (172.64.145.220)
+Host is up (0.016s latency).
+Other addresses for withdraw.zksync.io (not scanned): 104.18.42.36 2606:4700:4400::6812:2a24 2606:4700:4400::ac40:91dc
+Not shown: 997 filtered tcp ports (no-response)
+PORT     STATE SERVICE    VERSION
+80/tcp   open  tcpwrapped
+443/tcp  open  tcpwrapped
+8080/tcp open  tcpwrapped
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 20.09 seconds
+[2024-06-05 21:48:11.347398] Running Nikto scan on withdraw.zksync.io
+Unable to find image 'sullo/nikto:latest' locally
+docker: Error response from daemon: pull access denied for sullo/nikto, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-05 21:48:15.829417] Running SSL scan on withdraw.zksync.io
+Unable to find image 'nabla/sslscan:latest' locally
+docker: Error response from daemon: pull access denied for nabla/sslscan, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-05 21:48:17.197494] Completed scanning URL: withdraw.zksync.io
+[2024-06-05 21:48:17.197494] Scanning URL: checkout.zksync.io
+[2024-06-05 21:48:17.198027] Running Nmap scan on checkout.zksync.io
+Starting Nmap 7.95 ( https://nmap.org ) at 2024-06-06 04:48 UTC
+Nmap scan report for checkout.zksync.io (172.64.145.220)
+Host is up (0.011s latency).
+Other addresses for checkout.zksync.io (not scanned): 104.18.42.36 2606:4700:4400::ac40:91dc 2606:4700:4400::6812:2a24
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE    VERSION
+80/tcp   open  tcpwrapped
+443/tcp  open  tcpwrapped
+8080/tcp open  tcpwrapped
+8443/tcp open  tcpwrapped
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 19.06 seconds
+[2024-06-05 21:48:37.372966] Running Nikto scan on checkout.zksync.io
+Unable to find image 'sullo/nikto:latest' locally
+docker: Error response from daemon: pull access denied for sullo/nikto, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-05 21:48:42.113945] Running SSL scan on checkout.zksync.io
+Unable to find image 'nabla/sslscan:latest' locally
+docker: Error response from daemon: pull access denied for nabla/sslscan, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[2024-06-05 21:48:43.420033] Completed scanning URL: checkout.zksync.io
+[2024-06-05 21:48:43.420163] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit
+[2024-06-05 21:48:44.241496] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit
+[2024-06-05 21:48:44.242495] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/circuit.rs
+[2024-06-05 21:48:44.876933] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/circuit.rs
+[2024-06-05 21:48:44.877905] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/exit_circuit.rs
+[2024-06-05 21:48:45.265095] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/exit_circuit.rs
+[2024-06-05 21:48:45.266121] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/mod.rs
+[2024-06-05 21:48:46.644095] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/mod.rs
+[2024-06-05 21:48:46.645067] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/mint_nft.rs
+[2024-06-05 21:48:46.990398] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/mint_nft.rs
+[2024-06-05 21:48:46.991388] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/noop.rs
+[2024-06-05 21:48:47.617354] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/noop.rs
+[2024-06-05 21:48:47.618352] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/withdraw.rs
+[2024-06-05 21:48:47.976518] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/withdraw.rs
+[2024-06-05 21:48:47.978493] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/swap.rs
+[2024-06-05 21:48:48.641295] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/swap.rs
+[2024-06-05 21:48:48.642296] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/withdraw_nft.rs
+[2024-06-05 21:48:50.079477] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/withdraw_nft.rs
+[2024-06-05 21:48:50.079477] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/deposit.rs
+[2024-06-05 21:48:50.445440] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/deposit.rs
+[2024-06-05 21:48:50.446431] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/transfer.rs
+[2024-06-05 21:48:50.835012] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/transfer.rs
+[2024-06-05 21:48:50.835012] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/transfer_to_new.rs
+[2024-06-05 21:48:51.476479] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/transfer_to_new.rs
+[2024-06-05 21:48:51.478460] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/forced_exit.rs
+[2024-06-05 21:48:51.839562] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/forced_exit.rs
+[2024-06-05 21:48:51.840108] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/change_pubkey_offchain.rs
+[2024-06-05 21:48:52.155181] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/change_pubkey_offchain.rs
+[2024-06-05 21:48:52.156174] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/full_exit.rs
+[2024-06-05 21:48:52.547270] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/full_exit.rs
+[2024-06-05 21:48:52.548264] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/utils.rs
+[2024-06-05 21:48:52.925717] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/witness/utils.rs
+[2024-06-05 21:48:52.926719] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/allocated_structures.rs
+[2024-06-05 21:48:53.301189] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/allocated_structures.rs
+[2024-06-05 21:48:53.302220] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/utils.rs
+[2024-06-05 21:48:53.942992] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/utils.rs
+[2024-06-05 21:48:53.942992] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/account.rs
+[2024-06-05 21:48:55.654902] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/account.rs
+[2024-06-05 21:48:55.655899] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/element.rs
+[2024-06-05 21:48:56.343349] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/element.rs
+[2024-06-05 21:48:56.344348] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/signature.rs
+[2024-06-05 21:48:56.672274] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/signature.rs
+[2024-06-05 21:48:56.672274] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/serialization.rs
+[2024-06-05 21:48:57.033402] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/serialization.rs
+[2024-06-05 21:48:57.035458] Scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/operation.rs
+[2024-06-05 21:48:57.409403] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/tree/master/core/lib/circuit/src/operation.rs
+[2024-06-05 21:48:57.410403] Scanning Smart Contract: https://github.com/matter-labs/zksync/blob/breaking/contracts/contracts/UpgradeGatekeeper.sol
+[2024-06-05 21:48:58.376795] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/blob/breaking/contracts/contracts/UpgradeGatekeeper.sol
+[2024-06-05 21:48:58.376795] Scanning Smart Contract: https://github.com/matter-labs/zksync/blob/breaking/contracts/contracts/Proxy.sol
+[2024-06-05 21:48:59.316369] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/blob/breaking/contracts/contracts/Proxy.sol
+[2024-06-05 21:48:59.317552] Scanning Smart Contract: https://github.com/matter-labs/zksync/blob/breaking/contracts/contracts/ZkSync.sol
+[2024-06-05 21:49:07.445800] Completed scanning Smart Contract: https://github.com/matter-labs/zksync/blob/breaking/contracts/contracts/ZkSync.sol
+[2024-06-05 21:49:07.446830] Scanning Smart Contract: https://github.com/matter-labs/zksync/blob/breaking/contracts/contracts/AdditionalZkSync.sol
