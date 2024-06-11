@@ -43,7 +43,7 @@ As part of this project, we have also investigated what an in-scope Vulnerabilit
 
 This project demonstrates a prototype for performing comprehensive OSINT tasks using the Giza SDK. The prototype can be extended and integrated into more extensive security auditing and vulnerability detection platforms.
 
-# Potential Attack Vectors
+### Potential Attack Vectors
 1. Smart Contract Vulnerabilities:
     - Reentrancy attacks
     - Integer overflows/underflows
@@ -65,5 +65,3 @@ This project demonstrates a prototype for performing comprehensive OSINT tasks u
     - Sybil attacks
     - Front-running
     - Oracle manipulation
-
-
