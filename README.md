@@ -48,44 +48,6 @@ This project uses the Giza SDK to perform an OSINT security action. The action f
     npm run dev
     ```
 
-### Web App Dashboard
-The Web App dashboard, built with Next.js, provides a user-friendly interface for managing bug bounties, viewing threat intelligence, and handling vulnerability disclosures.
-
-## Results
-The results will include:
-
-Repository vulnerabilities
-Documentation analysis
-WHOIS information
-Shodan information
-
-## Vulnerability Disclosure Program (VDP) Investigation
-As part of this project, we have also investigated what an in-scope Vulnerability Disclosure Program (VDP) for Giza AI would look like. Our proposed VDP includes a clear scope of assets, a structured reward system based on the severity of vulnerabilities, and a detailed process for reporting and handling vulnerabilities. This VDP aims to enhance the security posture of Giza AI by encouraging the identification and responsible disclosure of potential vulnerabilities.
-
-
-### Potential Attack Vectors
-1. Smart Contract Vulnerabilities:
-    - Reentrancy attacks
-    - Integer overflows/underflows
-    - Access control issues
-    - Insecure storage
-
-2. Machine Learning Model Risks:
-    - Model poisoning
-    - Adversarial inputs
-    - Data leakage
-    - Model inversion
-
-3. Zero-Knowledge Proofs (ZK Proofs):
-    - Incorrect implementation of ZK proofs
-    - Verification bypass
-    - Cryptographic weaknesses
-
-4. Protocol-Level Attacks:
-    - Sybil attacks
-    - Front-running
-    - Oracle manipulation
-
 ## Docker Installation
 
 This project provides a Docker container for the WebTrey dashboard application, which is a comprehensive solution for managing and analyzing security vulnerabilities. The container includes a suite of tools designed to integrate seamlessly with Giza AI, enabling advanced security automation and intelligence.
@@ -147,6 +109,44 @@ The WebTrey Docker container includes the following tools:
     - Hardhat: A development environment to compile, deploy, test, and debug Ethereum software.
     - Python 3.10: Includes various security libraries and tools for automation and analysis.
 
+### Web App Dashboard
+The Web App dashboard, built with Next.js, provides a user-friendly interface for managing bug bounties, viewing threat intelligence, and handling vulnerability disclosures.
+
+## Results
+The results will include:
+
+Repository vulnerabilities
+Documentation analysis
+WHOIS information
+Shodan information
+
+## Vulnerability Disclosure Program (VDP) Investigation
+As part of this project, we have also investigated what an in-scope Vulnerability Disclosure Program (VDP) for Giza AI would look like. Our proposed VDP includes a clear scope of assets, a structured reward system based on the severity of vulnerabilities, and a detailed process for reporting and handling vulnerabilities. This VDP aims to enhance the security posture of Giza AI by encouraging the identification and responsible disclosure of potential vulnerabilities.
+
+
+### Potential Attack Vectors
+1. Smart Contract Vulnerabilities:
+    - Reentrancy attacks
+    - Integer overflows/underflows
+    - Access control issues
+    - Insecure storage
+
+2. Machine Learning Model Risks:
+    - Model poisoning
+    - Adversarial inputs
+    - Data leakage
+    - Model inversion
+
+3. Zero-Knowledge Proofs (ZK Proofs):
+    - Incorrect implementation of ZK proofs
+    - Verification bypass
+    - Cryptographic weaknesses
+
+4. Protocol-Level Attacks:
+    - Sybil attacks
+    - Front-running
+    - Oracle manipulation
+
 # Integration with Giza AI
 
 ### Value Statement
@@ -162,10 +162,27 @@ The integration with Giza AI empowers the WebTrey Dashboard with advanced AI cap
 
 5. Seamless Integration: Easily integrate Giza AI's powerful features into your existing workflows, enhancing your security operations with minimal effort.
 
+
 ## Conclusion
 
-This project demonstrates a prototype for performing comprehensive OSINT tasks using the Giza SDK. The prototype can be extended and integrated into more extensive security auditing and vulnerability detection platforms.
+The Netsoul WebTrey - Giza OSINT Security Action project provides a powerful and comprehensive solution for enhancing the security of decentralized protocols and applications. By leveraging the Giza SDK, this project demonstrates advanced capabilities in automated vulnerability detection, OSINT (Open Source Intelligence) scanning, and continuous monitoring. The integration with Giza AI ensures that the analysis and actions taken are backed by verifiable machine learning models, enhancing trust and reliability.
 
+This project includes a suite of robust tools within a Docker container, making it easy to deploy and use. The WebTrey dashboard, built with Next.js, provides a user-friendly interface for managing bug bounties, viewing threat intelligence, and handling vulnerability disclosures. The included tools like Slither, Mythril, Echidna, Foundry, and Hardhat ensure that the platform is well-equipped to handle a wide range of security tasks.
+
+In addition to providing a functional prototype for OSINT tasks, this project also proposes a structured Vulnerability Disclosure Program (VDP) for Giza AI. This VDP outlines the potential attack vectors, a clear scope of assets, and a reward system based on the severity of vulnerabilities. The VDP aims to encourage responsible disclosure and enhance the overall security posture of Giza AI.
+
+By integrating Giza AI, the WebTrey Dashboard can continuously monitor and analyze security logs, provide real-time threat intelligence, and automate responses to security incidents. This seamless integration ensures that security operations are efficient and effective, with minimal effort required to incorporate these advanced features into existing workflows.
+
+Overall, the Netsoul WebTrey - Giza OSINT Security Action project sets a strong foundation for future development and integration of AI-powered security solutions. It demonstrates the potential for leveraging advanced AI models and tools to enhance the security and reliability of decentralized protocols and applications.
 
 # Contributing
 If you wish to contribute to this project, please fork the repository and submit a pull request.
+
+# Contact
+For any inquiries, contributions, or further information, please reach out to:
+
+- Justin Nguyen (@jeytuan)
+    - Email: justin@net-soul.com
+
+- Louis DeGuzman
+    - Email: louis@net-soul.com
