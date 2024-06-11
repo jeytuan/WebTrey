@@ -36,34 +36,34 @@ Documentation analysis
 WHOIS information
 Shodan information
 
+## Vulnerability Disclosure Program (VDP) Investigation
+As part of this project, we have also investigated what an in-scope Vulnerability Disclosure Program (VDP) for Giza AI would look like. Our proposed VDP includes a clear scope of assets, a structured reward system based on the severity of vulnerabilities, and a detailed process for reporting and handling vulnerabilities. This VDP aims to enhance the security posture of Giza AI by encouraging the identification and responsible disclosure of potential vulnerabilities.
 
 ## Conclusion
 
 This project demonstrates a prototype for performing comprehensive OSINT tasks using the Giza SDK. The prototype can be extended and integrated into more extensive security auditing and vulnerability detection platforms.
 
-Potential Attack Vectors
+# Potential Attack Vectors
 1. Smart Contract Vulnerabilities:
-- Reentrancy attacks
-- Integer overflows/underflows
-- Access control issues
-- Insecure storage
+    - Reentrancy attacks
+    - Integer overflows/underflows
+    - Access control issues
+    - Insecure storage
 
 2. Machine Learning Model Risks:
-- Model poisoning
-- Adversarial inputs
-- Data leakage
-- Model inversion
+    - Model poisoning
+    - Adversarial inputs
+    - Data leakage
+    - Model inversion
 
 3. Zero-Knowledge Proofs (ZK Proofs):
-- Incorrect implementation of ZK proofs
-- Verification bypass
-- Cryptographic weaknesses
+    - Incorrect implementation of ZK proofs
+    - Verification bypass
+    - Cryptographic weaknesses
 
 4. Protocol-Level Attacks:
-- Sybil attacks
-- Front-running
-- Oracle manipulation
+    - Sybil attacks
+    - Front-running
+    - Oracle manipulation
 
 
-## Vulnerability Disclosure Program (VDP) Investigation
-As part of this project, we have also investigated what an in-scope Vulnerability Disclosure Program (VDP) for Giza AI would look like. Our proposed VDP includes a clear scope of assets, a structured reward system based on the severity of vulnerabilities, and a detailed process for reporting and handling vulnerabilities. This VDP aims to enhance the security posture of Giza AI by encouraging the identification and responsible disclosure of potential vulnerabilities.
