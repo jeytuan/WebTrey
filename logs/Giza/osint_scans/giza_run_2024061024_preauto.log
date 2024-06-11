@@ -1,0 +1,641 @@
+(myenv) PS C:\Users\justi\Documents\GitHub\WebTrey\webtrey-dashboard\backend\webtrey\giza>
+(myenv) PS C:\Users\justi\Documents\GitHub\WebTrey\webtrey-dashboard\backend\webtrey\giza>
+(myenv) PS C:\Users\justi\Documents\GitHub\WebTrey\webtrey-dashboard\backend\webtrey\giza> python.exe .\giza_run.py
+20:00:49.384 | INFO    | Created flow run 'foamy-cat' for flow 'execute-osint-security-action'
+20:00:49.386 | INFO    | Action run 'foamy-cat' - View at https://actions-server-jeytuan-dblzzhtf5q-ew.a.run.app/flow-runs/flow-run/c58908cb-87a7-4f6f-9999-903e6ec15990
+20:00:49.989 | INFO    | Action run 'foamy-cat' - Created task run 'fetch_repositories-0' for task 'fetch_repositories'
+20:00:49.992 | INFO    | Action run 'foamy-cat' - Executing 'fetch_repositories-0' immediately...
+Fetching repositories from GitHub...
+Fetched 17 repositories.
+20:00:52.493 | INFO    | Task run 'fetch_repositories-0' - Finished in state Completed()
+20:00:52.695 | INFO    | Action run 'foamy-cat' - Created task run 'scan_repository-0' for task 'scan_repository'
+20:00:52.696 | INFO    | Action run 'foamy-cat' - Executing 'scan_repository-0' immediately...
+Scanning repository orion for vulnerabilities...
+Scan completed for repository orion.
+20:00:53.329 | INFO    | Task run 'scan_repository-0' - Finished in state Completed()
+20:00:53.541 | INFO    | Action run 'foamy-cat' - Created task run 'scan_repository-1' for task 'scan_repository'
+20:00:53.541 | INFO    | Action run 'foamy-cat' - Executing 'scan_repository-1' immediately...
+Scanning repository Giza-Hub for vulnerabilities...
+Scan completed for repository Giza-Hub.
+20:00:54.173 | INFO    | Task run 'scan_repository-1' - Finished in state Completed()
+20:00:54.383 | INFO    | Action run 'foamy-cat' - Created task run 'scan_repository-2' for task 'scan_repository'
+20:00:54.385 | INFO    | Action run 'foamy-cat' - Executing 'scan_repository-2' immediately...
+Scanning repository osiris for vulnerabilities...
+Scan completed for repository osiris.
+20:00:55.010 | INFO    | Task run 'scan_repository-2' - Finished in state Completed()
+20:00:55.225 | INFO    | Action run 'foamy-cat' - Created task run 'scan_repository-3' for task 'scan_repository'
+20:00:55.228 | INFO    | Action run 'foamy-cat' - Executing 'scan_repository-3' immediately...
+Scanning repository cairo-containers for vulnerabilities...
+Scan completed for repository cairo-containers.
+20:00:55.857 | INFO    | Task run 'scan_repository-3' - Finished in state Completed()
+20:00:56.059 | INFO    | Action run 'foamy-cat' - Created task run 'scan_repository-4' for task 'scan_repository'
+20:00:56.061 | INFO    | Action run 'foamy-cat' - Executing 'scan_repository-4' immediately...
+Scanning repository giza-cli for vulnerabilities...
+Scan completed for repository giza-cli.
+20:00:56.698 | INFO    | Task run 'scan_repository-4' - Finished in state Completed()
+20:00:56.901 | INFO    | Action run 'foamy-cat' - Created task run 'scan_repository-5' for task 'scan_repository'
+20:00:56.902 | INFO    | Action run 'foamy-cat' - Executing 'scan_repository-5' immediately...
+Scanning repository orion-benchmark for vulnerabilities...
+Scan completed for repository orion-benchmark.
+20:00:57.539 | INFO    | Task run 'scan_repository-5' - Finished in state Completed()
+20:00:57.756 | INFO    | Action run 'foamy-cat' - Created task run 'scan_repository-6' for task 'scan_repository'
+20:00:57.757 | INFO    | Action run 'foamy-cat' - Executing 'scan_repository-6' immediately...
+Scanning repository orion-proving-example for vulnerabilities...
+Scan completed for repository orion-proving-example.
+20:00:58.377 | INFO    | Task run 'scan_repository-6' - Finished in state Completed()
+20:00:58.589 | INFO    | Action run 'foamy-cat' - Created task run 'scan_repository-7' for task 'scan_repository'
+20:00:58.592 | INFO    | Action run 'foamy-cat' - Executing 'scan_repository-7' immediately...
+Scanning repository Tic-Tac-Stark for vulnerabilities...
+Scan completed for repository Tic-Tac-Stark.
+20:00:59.220 | INFO    | Task run 'scan_repository-7' - Finished in state Completed()
+20:00:59.435 | INFO    | Action run 'foamy-cat' - Created task run 'scan_repository-8' for task 'scan_repository'
+20:00:59.438 | INFO    | Action run 'foamy-cat' - Executing 'scan_repository-8' immediately...
+Scanning repository giza-agents for vulnerabilities...
+Scan completed for repository giza-agents.
+20:01:00.074 | INFO    | Task run 'scan_repository-8' - Finished in state Completed()
+20:01:00.283 | INFO    | Action run 'foamy-cat' - Created task run 'scan_repository-9' for task 'scan_repository'
+20:01:00.286 | INFO    | Action run 'foamy-cat' - Executing 'scan_repository-9' immediately...
+Scanning repository datasets for vulnerabilities...
+Scan completed for repository datasets.
+20:01:00.910 | INFO    | Task run 'scan_repository-9' - Finished in state Completed()
+20:01:01.111 | INFO    | Action run 'foamy-cat' - Created task run 'scan_repository-10' for task 'scan_repository'
+20:01:01.111 | INFO    | Action run 'foamy-cat' - Executing 'scan_repository-10' immediately...
+Scanning repository actions-template for vulnerabilities...
+Scan completed for repository actions-template.
+20:01:01.738 | INFO    | Task run 'scan_repository-10' - Finished in state Completed()
+20:01:01.947 | INFO    | Action run 'foamy-cat' - Created task run 'scan_repository-11' for task 'scan_repository'
+20:01:01.948 | INFO    | Action run 'foamy-cat' - Executing 'scan_repository-11' immediately...
+Scanning repository giza-benchmark for vulnerabilities...
+Scan completed for repository giza-benchmark.
+20:01:02.578 | INFO    | Task run 'scan_repository-11' - Finished in state Completed()
+20:01:02.784 | INFO    | Action run 'foamy-cat' - Created task run 'scan_repository-12' for task 'scan_repository'
+20:01:02.785 | INFO    | Action run 'foamy-cat' - Executing 'scan_repository-12' immediately...
+Scanning repository zkcook for vulnerabilities...
+Scan completed for repository zkcook.
+20:01:03.406 | INFO    | Task run 'scan_repository-12' - Finished in state Completed()
+20:01:03.608 | INFO    | Action run 'foamy-cat' - Created task run 'scan_repository-13' for task 'scan_repository'
+20:01:03.609 | INFO    | Action run 'foamy-cat' - Executing 'scan_repository-13' immediately...
+Scanning repository orion_ml for vulnerabilities...
+Scan completed for repository orion_ml.
+20:01:04.234 | INFO    | Task run 'scan_repository-13' - Finished in state Completed()
+20:01:04.446 | INFO    | Action run 'foamy-cat' - Created task run 'scan_repository-14' for task 'scan_repository'
+20:01:04.447 | INFO    | Action run 'foamy-cat' - Executing 'scan_repository-14' immediately...
+Scanning repository giza-sdk for vulnerabilities...
+Scan completed for repository giza-sdk.
+20:01:05.852 | INFO    | Task run 'scan_repository-14' - Finished in state Completed()
+20:01:06.068 | INFO    | Action run 'foamy-cat' - Created task run 'scan_repository-15' for task 'scan_repository'
+20:01:06.070 | INFO    | Action run 'foamy-cat' - Executing 'scan_repository-15' immediately...
+Scanning repository issues for vulnerabilities...
+Scan completed for repository issues.
+20:01:06.687 | INFO    | Task run 'scan_repository-15' - Finished in state Completed()
+20:01:06.898 | INFO    | Action run 'foamy-cat' - Created task run 'scan_repository-16' for task 'scan_repository'
+20:01:06.899 | INFO    | Action run 'foamy-cat' - Executing 'scan_repository-16' immediately...
+Scanning repository ape-starknet for vulnerabilities...
+Scan completed for repository ape-starknet.
+20:01:07.502 | INFO    | Task run 'scan_repository-16' - Finished in state Completed()
+20:01:07.702 | INFO    | Action run 'foamy-cat' - Created task run 'analyze_documentation-0' for task 'analyze_documentation'
+20:01:07.704 | INFO    | Action run 'foamy-cat' - Executing 'analyze_documentation-0' immediately...
+Analyzing documentation for potential vulnerabilities...
+Documentation analysis completed.
+20:01:08.325 | INFO    | Task run 'analyze_documentation-0' - Finished in state Completed()
+20:01:08.524 | INFO    | Action run 'foamy-cat' - Created task run 'domain_info-0' for task 'domain_info'
+20:01:08.524 | INFO    | Action run 'foamy-cat' - Executing 'domain_info-0' immediately...
+Fetching WHOIS information for domain: example.com
+20:01:09.723 | INFO    | Task run 'domain_info-0' - Finished in state Completed()
+20:01:09.933 | INFO    | Action run 'foamy-cat' - Created task run 'shodan_search-0' for task 'shodan_search'
+20:01:09.936 | INFO    | Action run 'foamy-cat' - Executing 'shodan_search-0' immediately...
+Searching Shodan for information on IP: 8.8.8.8
+20:01:10.672 | INFO    | Task run 'shodan_search-0' - Finished in state Completed()
+20:01:10.881 | INFO    | Action run 'foamy-cat' - Created task run 'aggregate_results-0' for task 'aggregate_results'
+20:01:10.883 | INFO    | Action run 'foamy-cat' - Executing 'aggregate_results-0' immediately...
+Aggregating results from scans, documentation analysis, WHOIS, and Shodan...
+Aggregated results: {
+  "repo_scans": [
+    {
+      "repo": "orion",
+      "vulnerabilities": [
+        {
+          "id": "VULN-001",
+          "severity": "high",
+          "description": "Placeholder vulnerability"
+        }
+      ]
+    },
+    {
+      "repo": "Giza-Hub",
+      "vulnerabilities": [
+        {
+          "id": "VULN-001",
+          "severity": "high",
+          "description": "Placeholder vulnerability"
+        }
+      ]
+    },
+    {
+      "repo": "osiris",
+      "vulnerabilities": [
+        {
+          "id": "VULN-001",
+          "severity": "high",
+          "description": "Placeholder vulnerability"
+        }
+      ]
+    },
+    {
+      "repo": "cairo-containers",
+      "vulnerabilities": [
+        {
+          "id": "VULN-001",
+          "severity": "high",
+          "description": "Placeholder vulnerability"
+        }
+      ]
+    },
+    {
+      "repo": "giza-cli",
+      "vulnerabilities": [
+        {
+          "id": "VULN-001",
+          "severity": "high",
+          "description": "Placeholder vulnerability"
+        }
+      ]
+    },
+    {
+      "repo": "orion-benchmark",
+      "vulnerabilities": [
+        {
+          "id": "VULN-001",
+          "severity": "high",
+          "description": "Placeholder vulnerability"
+        }
+      ]
+    },
+    {
+      "repo": "orion-proving-example",
+      "vulnerabilities": [
+        {
+          "id": "VULN-001",
+          "severity": "high",
+          "description": "Placeholder vulnerability"
+        }
+      ]
+    },
+    {
+      "repo": "Tic-Tac-Stark",
+      "vulnerabilities": [
+        {
+          "id": "VULN-001",
+          "severity": "high",
+          "description": "Placeholder vulnerability"
+        }
+      ]
+    },
+    {
+      "repo": "giza-agents",
+      "vulnerabilities": [
+        {
+          "id": "VULN-001",
+          "severity": "high",
+          "description": "Placeholder vulnerability"
+        }
+      ]
+    },
+    {
+      "repo": "datasets",
+      "vulnerabilities": [
+        {
+          "id": "VULN-001",
+          "severity": "high",
+          "description": "Placeholder vulnerability"
+        }
+      ]
+    },
+    {
+      "repo": "actions-template",
+      "vulnerabilities": [
+        {
+          "id": "VULN-001",
+          "severity": "high",
+          "description": "Placeholder vulnerability"
+        }
+      ]
+    },
+    {
+      "repo": "giza-benchmark",
+      "vulnerabilities": [
+        {
+          "id": "VULN-001",
+          "severity": "high",
+          "description": "Placeholder vulnerability"
+        }
+      ]
+    },
+    {
+      "repo": "zkcook",
+      "vulnerabilities": [
+        {
+          "id": "VULN-001",
+          "severity": "high",
+          "description": "Placeholder vulnerability"
+        }
+      ]
+    },
+    {
+      "repo": "orion_ml",
+      "vulnerabilities": [
+        {
+          "id": "VULN-001",
+          "severity": "high",
+          "description": "Placeholder vulnerability"
+        }
+      ]
+    },
+    {
+      "repo": "giza-sdk",
+      "vulnerabilities": [
+        {
+          "id": "VULN-001",
+          "severity": "high",
+          "description": "Placeholder vulnerability"
+        }
+      ]
+    },
+    {
+      "repo": "issues",
+      "vulnerabilities": [
+        {
+          "id": "VULN-001",
+          "severity": "high",
+          "description": "Placeholder vulnerability"
+        }
+      ]
+    },
+    {
+      "repo": "ape-starknet",
+      "vulnerabilities": [
+        {
+          "id": "VULN-001",
+          "severity": "high",
+          "description": "Placeholder vulnerability"
+        }
+      ]
+    }
+  ],
+  "documentation_analysis": {
+    "findings": [
+      {
+        "id": "DOC-001",
+        "severity": "medium",
+        "description": "Placeholder documentation issue"
+      }
+    ]
+  },
+  "domain_info": {
+    "domain_name": "EXAMPLE.COM",
+    "registrar": "RESERVED-Internet Assigned Numbers Authority",
+    "whois_server": "whois.iana.org",
+    "referral_url": null,
+    "updated_date": "2023-08-14 07:01:38",
+    "creation_date": "1995-08-14 04:00:00",
+    "expiration_date": "2024-08-13 04:00:00",
+    "name_servers": [
+      "A.IANA-SERVERS.NET",
+      "B.IANA-SERVERS.NET"
+    ],
+    "status": [
+      "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+      "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+      "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
+    ],
+    "emails": null,
+    "dnssec": "signedDelegation",
+    "name": null,
+    "org": null,
+    "address": null,
+    "city": null,
+    "state": null,
+    "registrant_postal_code": null,
+    "country": null
+  },
+  "shodan_info": {
+    "city": "Mountain View",
+    "region_code": "CA",
+    "os": null,
+    "tags": [],
+    "ip": 134744072,
+    "isp": "Google LLC",
+    "area_code": null,
+    "longitude": -122.0775,
+    "last_update": "2024-06-10T19:53:09.105582",
+    "ports": [
+      443,
+      53
+    ],
+    "latitude": 37.4056,
+    "hostnames": [
+      "dns.google"
+    ],
+    "country_code": "US",
+    "country_name": "United States",
+    "domains": [
+      "dns.google"
+    ],
+    "org": "Google LLC",
+    "data": [
+      {
+        "hash": -553166942,
+        "opts": {},
+        "timestamp": "2024-06-10T18:08:35.642179",
+        "isp": "Google LLC",
+        "data": "\nRecursion: enabled",
+        "_shodan": {
+          "region": "na",
+          "module": "dns-tcp",
+          "ptr": true,
+          "options": {},
+          "id": "da886941-b8f8-4439-b04c-301d71eca833",
+          "crawler": "3236b3c035ee7c860908ea10b5fd5a14d78bbb13"
+        },
+        "port": 53,
+        "hostnames": [
+          "dns.google"
+        ],
+        "location": {
+          "city": "Mountain View",
+          "region_code": "CA",
+          "area_code": null,
+          "longitude": -122.0775,
+          "country_name": "United States",
+          "country_code": "US",
+          "latitude": 37.4056
+        },
+        "dns": {
+          "resolver_hostname": null,
+          "recursive": true,
+          "resolver_id": null,
+          "software": null
+        },
+        "ip": 134744072,
+        "domains": [
+          "dns.google"
+        ],
+        "org": "Google LLC",
+        "os": null,
+        "asn": "AS15169",
+        "transport": "tcp",
+        "ip_str": "8.8.8.8"
+      },
+      {
+        "hash": -553166942,
+        "opts": {
+          "raw": "34ef81820001000000000000026964067365727665720000100003"
+        },
+        "timestamp": "2024-06-10T19:53:09.105582",
+        "isp": "Google LLC",
+        "data": "\nRecursion: enabled",
+        "_shodan": {
+          "region": "eu",
+          "module": "dns-udp",
+          "ptr": true,
+          "options": {},
+          "id": "1b0bd047-8b7d-438a-97d6-ba7523cc8734",
+          "crawler": "cdd92e2d835a37d2798fa6c7105171f4d214012f"
+        },
+        "port": 53,
+        "hostnames": [
+          "dns.google"
+        ],
+        "location": {
+          "city": "Mountain View",
+          "region_code": "CA",
+          "area_code": null,
+          "longitude": -122.0775,
+          "country_name": "United States",
+          "country_code": "US",
+          "latitude": 37.4056
+        },
+        "dns": {
+          "resolver_hostname": null,
+          "recursive": true,
+          "resolver_id": null,
+          "software": null
+        },
+        "ip": 134744072,
+        "domains": [
+          "dns.google"
+        ],
+        "org": "Google LLC",
+        "os": null,
+        "asn": "AS15169",
+        "transport": "udp",
+        "ip_str": "8.8.8.8"
+      },
+      {
+        "http": {
+          "status": 200,
+          "robots_hash": null,
+          "redirects": [
+            {
+              "host": "www.popitlikeyoumeanit.com",
+              "data": "HTTP/1.1 302 Found\r\nX-Content-Type-Options: nosniff\r\nAccess-Control-Allow-Origin: *\r\nLocation: https://dns.google/\r\nDate: Mon, 10 Jun 2024 18:38:12 GMT\r\nContent-Type: text/html; charset=UTF-8\r\nServer: HTTP server (unknown)\r\nContent-Length: 216\r\nX-XSS-Protection: 0\r\nX-Frame-Options: SAMEORIGIN\r\nAlt-Svc: h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000\r\n\r\n",
+              "location": "/"
+            }
+          ],
+          "securitytxt": null,
+          "title": "Google Public DNS",
+          "sitemap_hash": null,
+          "html_hash": -926212627,
+          "robots": null,
+          "favicon": {
+            "hash": 56641965,
+            "data": "iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAABa1BMVEUAAAA0p100qFM0qFY1pW81\npmg1p141p2M2pHw2pH02pXU3oYs3ook4n5k4oY85np86m6s6m6w7mLo7mLs7mbY7mbc7p1M8lcQ8\nlsM+ks4+ks8+oYo/j9g/j9k/kNg/p1NAiudAi+VAjOFAjeBBh+9BiO1BietChfRChvJEhfRIhvNI\npVJJonNKhPJMhPJMpVJRkcdTh/BXo1FZie5ag+xeie1fhORmlZ5on1Bsnk90juV4m05+jOCAmE2D\ngMuMkdmNk0yQkkuQlNeWltSXj0qliEiubLqvgka0f0W1lbm4m7e7mrS9eUPBdkLHcEDOm5vSZj3S\noJXTZD3UoJLZXTvdWTrgonzhUzjkTjflp3LmSjfoRjboRzbqQzXqRDXqRTXqRjXqRzXsYDHtYjHt\nYzHtqlruqlfveSzveizweyzwr0/yjSbyjib1nSD1nh/1nx/3tSz4rBf4rRb4tyb6uQn6uQr6uhn7\nugj7vAU/At79AAAAAXRSTlMAQObYZgAAArlJREFUeNrt2PVz1EAYxvFlcSnFXQoUXgoUdyvu7ra4\nFy22fz53NJ27Xmx38z7vwpHnl860yXw/c9PJJVGqXuXp9KLGBRG6bHHrWIJ2XeQ8iKB1VIH2Xuw+\nryCkr7dH7vcSRe3PWE9cgqD+xJVETIKgvp5PxCQI68/eyAUI60/uI+IRhPX1MmICBPbnEjEJnC52\nqd9O7+cCuF9p2/8wZS3hAUXHLiZiEnh+zSR/7CE4oPD4SRvYAP7fss1L8AoCA0pOWUjEJQi5y9DL\nB+MC1F4CA8pOIj5A4G1elwNUDfjfAaoGhAGUJAB8Ja4BQX3JL0PO/l8K0P59QQBv31tAJAPQYn2v\n5yIC9D2eDImkAe0EIlTf4fXEPiJkvxSwZTe2XyZIXgUC+yWCefh+oWDmoEBfHXd5FQjsK3V5Ww5g\nqUxfqdtHMvtzhPJKmYfnVqf70/qF+qa5Gwc6+xPWyfRNsgenOwBLZP4BTGtXdrb3ewYkLgFm3O4e\na/XTrwIRAtOxx5c2j12CVxHhBSa9W4dGAQuI8AKTtUdnFzX6s7YSXmBydm2/nrqG8ACTu3unjhLB\nBaZoRHBBYd+caT/08CYAoDCfPvz1navnh3ZwCnzqf2Yb+/Kq6djFAfDNJ4LRfXt//+bFE3uqCAL6\n4whjjusXTh4cYASUnWaz9lOunyOwcn0swOlUIEDJASp8ANkCwQ+gOwCV+pmCbgCoGiAIqNiPDrA1\nIDLAdinACPb/bQDPHRnz/ZgggKkffEdmsQAj1g8EWD6ACngutJx9/ydTa4UA2QTL3S9+O+JThwBa\nisbPr5i+gyDZR1DfGTAM6jsL3sQGPEf1XQVPfqD6roIRWN9R8AnXdxMM4/JugrfIvovgBbTvIHj6\nHZl3EYxg++WEz+B8KeEDPF8ieIfPFxteStSLDM9+ydTzEapelf0GmFdLbOXMqToAAAAASUVORK5C\nYII=\n",
+            "location": "https://dns.google:443/static/93dd5954/favicon.png"
+          },
+          "headers_hash": 818523308,
+          "host": "dns.google",
+          "html": "<!DOCTYPE html>\n<html lang=\"en\"> <head> <title>Google Public DNS</title>  <meta charset=\"UTF-8\"> <link href=\"/static/93dd5954/favicon.png\" rel=\"shortcut icon\" type=\"image/png\"> <link href=\"/static/e6eca759/matter.min.css\" rel=\"stylesheet\"> <link href=\"/static/b8536c37/shared.css\" rel=\"stylesheet\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">  <link href=\"/static/d05cd6ba/root.css\" rel=\"stylesheet\"> </head> <body> <span class=\"filler top\"></span>   <div class=\"logo\" title=\"Google Public DNS\"> <div class=\"logo-text\"><span>Public DNS</span></div> </div>  <form action=\"/query\" method=\"GET\">  <div class=\"row\"> <label class=\"matter-textfield-outlined\"> <input type=\"text\" name=\"name\" placeholder=\"&nbsp;\"> <span>DNS Name</span> <p class=\"help\"> Enter a domain (like example.com) or IP address (like 8.8.8.8 or 2001:4860:4860::8844) here. </p> </label> <button class=\"matter-button-contained matter-primary\" type=\"submit\">Resolve</button> </div> </form>  <span class=\"filler bottom\"></span> <footer class=\"row\"> <a href=\"https://developers.google.com/speed/public-dns\">Help</a> <a href=\"/cache\">Cache Flush</a> <span class=\"filler\"></span> <a href=\"https://developers.google.com/speed/public-dns/docs/using\"> Get Started with Google Public DNS </a> </footer>   <script nonce=\"oUy9io1xdjVcberk-Cz4WQ\">document.forms[0].name.focus();</script> </body> </html>",
+          "location": "/",
+          "components": {},
+          "server": "scaffolding on HTTPServer2",
+          "sitemap": null,
+          "securitytxt_hash": null
+        },
+        "opts": {
+          "vulns": [],
+          "heartbleed": "2024/06/10 18:43:05 8.8.8.8:443 - SAFE\n"
+        },
+        "timestamp": "2024-06-10T18:42:58.075068",
+        "org": "Google LLC",
+        "isp": "Google LLC",
+        "data": "HTTP/1.1 200 OK\r\nContent-Security-Policy: object-src 'none';base-uri 'self';script-src 'nonce-oUy9io1xdjVcberk-Cz4WQ' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/honest_dns/1_0;frame-ancestors 'none'\r\nStrict-Transport-Security: max-age=31536000; includeSubDomains; preload\r\nX-Content-Type-Options: nosniff\r\nContent-Type: text/html; charset=UTF-8\r\nDate: Mon, 10 Jun 2024 18:38:17 GMT\r\nServer: scaffolding on HTTPServer2\r\nCache-Control: private\r\nX-XSS-Protection: 0\r\nX-Frame-Options: SAMEORIGIN\r\nAlt-Svc: h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000\r\nAccept-Ranges: none\r\nVary: Accept-Encoding\r\nTransfer-Encoding: chunked\r\n\r\n",
+        "_shodan": {
+          "region": "na",
+          "module": "https",
+          "ptr": true,
+          "options": {
+            "hostname": "www.popitlikeyoumeanit.com",
+            "scan": "nxm4hwc6fxBnbVAn"
+          },
+          "id": "debf9dc5-7959-4ddf-b475-f3512173c374",
+          "crawler": "0d90a5501831fb4236df86ef4689a0ef1c133823"
+        },
+        "port": 443,
+        "ssl": {
+          "chain_sha256": [
+            "6c9a54d8fc9348cf2a71add9e9c36333e912b2f3af35e302291312d4f2af809b",
+            "e6fe22bf45e4f0d3b85c59e02c0f495418e1eb8d3210f788d48cd5e1cb547cd4",
+            "3ee0278df71fa3c125c4cd487f01d774694e6fc57e0cd94c24efd769133918e5"
+          ],
+          "jarm": "29d3fd00029d29d00042d43d00041d598ac0c1012db967bb1ad0ff2491b3ae",
+          "chain": [
+            "-----BEGIN CERTIFICATE-----\nMIIFsTCCBJmgAwIBAgIQGbnmip2x710SWfceZTA3lTANBgkqhkiG9w0BAQsFADA7\nMQswCQYDVQQGEwJVUzEeMBwGA1UEChMVR29vZ2xlIFRydXN0IFNlcnZpY2VzMQww\nCgYDVQQDEwNXUjIwHhcNMjQwNTIxMDYzMjQzWhcNMjQwODEzMDYzMjQyWjAVMRMw\nEQYDVQQDEwpkbnMuZ29vZ2xlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC\nAQEA3JChdHLuEw0bxbnTlbtfBEUqcjitFBdnnk5q7aZsH/8MJfr5u05xofzVSOpx\nwtUCZtzIDif2u2zlfygMv4lp6A+PrhkqKA14hGgYFBr8JOawPIJL9zvlHPYaKauE\nLkqcVOq9vX+bV5PcFfDfrRhOw5I5xxUelEf0YS6O9NLgdPbaMbaUN6tdw2mg3dbd\n9E6fDybnExFPgaCRtJiLO6DdnstIstqtH3POm9e3wyN5c2DbccqCcCVCu/t7XF+Y\n2Tsryc24jFsMIA05gy62k/gO8b2mE4yPAsZ4coiNKQr0E24MDMFbWFTrl771xB0G\ngUXsFH8pHkt2tWaiEnHZla3m3wIDAQABo4IC1TCCAtEwDgYDVR0PAQH/BAQDAgWg\nMBMGA1UdJQQMMAoGCCsGAQUFBwMBMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFMVo\nBuzvFZ5/26AjKqgBJ+3t2FJtMB8GA1UdIwQYMBaAFN4bHu15FdQ+NyTDIbvsNDlt\nQrIwMFgGCCsGAQUFBwEBBEwwSjAhBggrBgEFBQcwAYYVaHR0cDovL28ucGtpLmdv\nb2cvd3IyMCUGCCsGAQUFBzAChhlodHRwOi8vaS5wa2kuZ29vZy93cjIuY3J0MIGs\nBgNVHREEgaQwgaGCCmRucy5nb29nbGWCDmRucy5nb29nbGUuY29tghAqLmRucy5n\nb29nbGUuY29tggs4ODg4Lmdvb2dsZYIQZG5zNjQuZG5zLmdvb2dsZYcECAgICIcE\nCAgEBIcQIAFIYEhgAAAAAAAAAACIiIcQIAFIYEhgAAAAAAAAAACIRIcQIAFIYEhg\nAAAAAAAAAABkZIcQIAFIYEhgAAAAAAAAAAAAZDATBgNVHSAEDDAKMAgGBmeBDAEC\nATA2BgNVHR8ELzAtMCugKaAnhiVodHRwOi8vYy5wa2kuZ29vZy93cjIvNzVyNFp5\nQTN2QTAuY3JsMIIBBAYKKwYBBAHWeQIEAgSB9QSB8gDwAHcASLDja9qmRzQP5WoC\n+p0w6xxSActW3SyB2bu/qznYhHMAAAGPmhEfiAAABAMASDBGAiEA1m4IyOsXsOQ/\nt4QWc3NyTcplP+L/ZL6DcL/azFXovVECIQDFRzWnEJ11+uZf7AW5uNSNsaT5/SRM\nk3jAC7hsrx5aigB1AHb/iD8KtvuVUcJhzPWHujS0pM27KdxoQgqf5mdMWjp0AAAB\nj5oRH5gAAAQDAEYwRAIgYcW/RmYcRCICzKxgLlVaDWl2kc4CSDijPIRioxtYMEcC\nIB+GDN53O8jNOLY3cgtlW8xdqfAXqHaQwtQ4MKU4X4ekMA0GCSqGSIb3DQEBCwUA\nA4IBAQCGaL//me87Zd/ZgIk7Te7hA5D1xnZJUcqckGUEksfm9RraVfNITPorggRO\nOz4S4jkO5PSIgKf8bATTdCfKVuorQsenESY13e6oNg537ZOQzypTg87HmqHdmoOn\nfWzDzBsChd855MB3u+WtqlO7aBESdJUOUMsJt4yyU7otkNrBEPZXwR0odenGHa0l\nM4nSeMDZLorvv6zYshqJWbSW1uIUIqXrJS7LrOj2alRYCVJfdNtrEHItkepD5+Il\n9g9wL57bcOskqE2jqSir4Yc89jdp7On3hOx2GYsGpsmtflZ4kd+RWc8kyIZ1h3W7\nVtI63yzVjoW1vyyJ3w6UyIXqvVGU\n-----END CERTIFICATE-----\n",
+            "-----BEGIN CERTIFICATE-----\nMIIFCzCCAvOgAwIBAgIQf/AFoHxM3tEArZ1mpRB7mDANBgkqhkiG9w0BAQsFADBH\nMQswCQYDVQQGEwJVUzEiMCAGA1UEChMZR29vZ2xlIFRydXN0IFNlcnZpY2VzIExM\nQzEUMBIGA1UEAxMLR1RTIFJvb3QgUjEwHhcNMjMxMjEzMDkwMDAwWhcNMjkwMjIw\nMTQwMDAwWjA7MQswCQYDVQQGEwJVUzEeMBwGA1UEChMVR29vZ2xlIFRydXN0IFNl\ncnZpY2VzMQwwCgYDVQQDEwNXUjIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK\nAoIBAQCp/5x/RR5wqFOfytnlDd5GV1d9vI+aWqxG8YSau5HbyfsvAfuSCQAWXqAc\n+MGr+XgvSszYhaLYWTwO0xj7sfUkDSbutltkdnwUxy96zqhMt/TZCPzfhyM1IKji\naeKMTj+xWfpgoh6zySBTGYLKNlNtYE3pAJH8do1cCA8Kwtzxc2vFE24KT3rC8gIc\nLrRjg9ox9i11MLL7q8Ju26nADrn5Z9TDJVd06wW06Y613ijNzHoU5HEDy01hLmFX\nxRmpC5iEGuh5KdmyjS//V2pm4M6rlagplmNwEmceOuHbsCFx13ye/aoXbv4r+zgX\nFNFmp6+atXDMyGOBOozAKql2N87jAgMBAAGjgf4wgfswDgYDVR0PAQH/BAQDAgGG\nMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjASBgNVHRMBAf8ECDAGAQH/\nAgEAMB0GA1UdDgQWBBTeGx7teRXUPjckwyG77DQ5bUKyMDAfBgNVHSMEGDAWgBTk\nrysmcRorSCeFL1JmLO/wiRNxPjA0BggrBgEFBQcBAQQoMCYwJAYIKwYBBQUHMAKG\nGGh0dHA6Ly9pLnBraS5nb29nL3IxLmNydDArBgNVHR8EJDAiMCCgHqAchhpodHRw\nOi8vYy5wa2kuZ29vZy9yL3IxLmNybDATBgNVHSAEDDAKMAgGBmeBDAECATANBgkq\nhkiG9w0BAQsFAAOCAgEARXWL5R87RBOWGqtY8TXJbz3S0DNKhjO6V1FP7sQ02hYS\nTL8Tnw3UVOlIecAwPJQl8hr0ujKUtjNyC4XuCRElNJThb0Lbgpt7fyqaqf9/qdLe\nSiDLs/sDA7j4BwXaWZIvGEaYzq9yviQmsR4ATb0IrZNBRAq7x9UBhb+TV+PfdBJT\nDhEl05vc3ssnbrPCuTNiOcLgNeFbpwkuGcuRKnZc8d/KI4RApW//mkHgte8y0YWu\nryUJ8GLFbsLIbjL9uNrizkqRSvOFVU6xddZIMy9vhNkSXJ/UcZhjJY1pXAprffJB\nvei7j+Qi151lRehMCofa6WBmiA4fx+FOVsV2/7R6V2nyAiIJJkEd2nSi5SnzxJrl\nXdaqev3htytmOPvoKWa676ATL/hzfvDaQBEcXd2Ppvy+275W+DKcH0FBbX62xevG\niza3F4ydzxl6NJ8hk8R+dDXSqv1MbRT1ybB5W0k8878XSOjvmiYTDIfyc9acxVJr\nY/cykHipa+te1pOhv7wYPYtZ9orGBV5SGOJm4NrB3K1aJar0RfzxC3ikr7Dyc6Qw\nqDTBU39CluVIQeuQRgwG3MuSxl7zRERDRilGoKb8uY45JzmxWuKxrfwT/478JuHU\n/oTxUFqOl2stKnn7QGTq8z29W+GgBLCXSBxC9epaHM0myFH/FJlniXJfHeytWt0=\n-----END CERTIFICATE-----\n",
+            "-----BEGIN CERTIFICATE-----\nMIIFYjCCBEqgAwIBAgIQd70NbNs2+RrqIQ/E8FjTDTANBgkqhkiG9w0BAQsFADBX\nMQswCQYDVQQGEwJCRTEZMBcGA1UEChMQR2xvYmFsU2lnbiBudi1zYTEQMA4GA1UE\nCxMHUm9vdCBDQTEbMBkGA1UEAxMSR2xvYmFsU2lnbiBSb290IENBMB4XDTIwMDYx\nOTAwMDA0MloXDTI4MDEyODAwMDA0MlowRzELMAkGA1UEBhMCVVMxIjAgBgNVBAoT\nGUdvb2dsZSBUcnVzdCBTZXJ2aWNlcyBMTEMxFDASBgNVBAMTC0dUUyBSb290IFIx\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAthECix7joXebO9y/lD63\nladAPKH9gvl9MgaCcfb2jH/76Nu8ai6Xl6OMS/kr9rH5zoQdsfnFl97vufKj6bwS\niV6nqlKr+CMny6SxnGPb15l+8Ape62im9MZaRw1NEDPjTrETo8gYbEvs/AmQ351k\nKSUjB6G00j0uYODP0gmHu81I8E3CwnqIiru6z1kZ1q+PsAewnjHxgsHA3y6mbWwZ\nDrXYfiYaRQM9sHmklCitD38m5agI/pboPGiUU+6DOogrFZYJsuB6jC511pzrp1Zk\nj5ZPaK49l8KEj8C8QMALXL32h7M1bKwYUH+E4EzNktMg6TO8UpmvMrUpsyUqtEj5\ncuHKZPfmghCN6J3Cioj6OGaK/GP5Afl4/Xtcd/p2h/rs37EOeZVXtL0m79YB0esW\nCruOC7XFxYpVq9Os6pFLKcwZpDIlTirxZUTQAs6qzkm06p98g7BAe+dDq6dso499\niYH6TKX/1Y7DzkvgtdizjkXPdsDtQCv9Uw+wp9U7DbGKogPeMa3Md+pvez7W35Ei\nEua++tgy/BBjFFFy3l3WFpO9KWgz7zpm7AeKJt8T11dleCfeXkkUAKIAf5qoIbap\nsZWwpbkNFhHax2xIPEDgfg1azVY80ZcFuctL7TlLnMQ/0lUTbiSw1nH69MG6zO0b\n9f6BQdgAmD06yK56mDcYBZUCAwEAAaOCATgwggE0MA4GA1UdDwEB/wQEAwIBhjAP\nBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBTkrysmcRorSCeFL1JmLO/wiRNxPjAf\nBgNVHSMEGDAWgBRge2YaRQ2XyolQL30EzTSo//z9SzBgBggrBgEFBQcBAQRUMFIw\nJQYIKwYBBQUHMAGGGWh0dHA6Ly9vY3NwLnBraS5nb29nL2dzcjEwKQYIKwYBBQUH\nMAKGHWh0dHA6Ly9wa2kuZ29vZy9nc3IxL2dzcjEuY3J0MDIGA1UdHwQrMCkwJ6Al\noCOGIWh0dHA6Ly9jcmwucGtpLmdvb2cvZ3NyMS9nc3IxLmNybDA7BgNVHSAENDAy\nMAgGBmeBDAECATAIBgZngQwBAgIwDQYLKwYBBAHWeQIFAwIwDQYLKwYBBAHWeQIF\nAwMwDQYJKoZIhvcNAQELBQADggEBADSkHrEoo9C0dhemMXoh6dFSPsjbdBZBiLg9\nNR3t5P+T4Vxfq7vqfM/b5A3Ri1fyJm9bvhdGaJQ3b2t6yMAYN/olUazsaL+yyEn9\nWprKASOshIArAoyZl+tJaox118fessmXn1hIVw41oeQa1v1vg4Fv74zPl6/AhSrw\n9U5pCZEt4Wi4wStz6dTZ/CLANx8LZh1J7QJVj2fhMtfTJr9w4z30Z209fOU0iOMy\n+qduBmpvvYuR7hZL6Dupszfnw0Skfths18dG9ZKb59UhvmaSGZRVbNQpsg3BZlvi\nd0lIKO2d1xozclOzgjXPYovJJIultzkMu34qQb9Sz/yilrbCgj8=\n-----END CERTIFICATE-----\n"
+          ],
+          "dhparams": null,
+          "versions": [
+            "-TLSv1",
+            "-SSLv2",
+            "-SSLv3",
+            "-TLSv1.1",
+            "TLSv1.2",
+            "TLSv1.3"
+          ],
+          "acceptable_cas": [],
+          "tlsext": [
+            {
+              "id": 51,
+              "name": "key_share"
+            },
+            {
+              "id": 43,
+              "name": "supported_versions"
+            }
+          ],
+          "ja3s": "66e33336e3e99f75410126f42d44cc81",
+          "cert": {
+            "sig_alg": "sha256WithRSAEncryption",
+            "issued": "20240521063243Z",
+            "expires": "20240813063242Z",
+            "expired": false,
+            "version": 2,
+            "extensions": [
+              {
+                "critical": true,
+                "data": "\\x03\\x02\\x05\\xa0",
+                "name": "keyUsage"
+              },
+              {
+                "data": "0\\n\\x06\\x08+\\x06\\x01\\x05\\x05\\x07\\x03\\x01",
+                "name": "extendedKeyUsage"
+              },
+              {
+                "critical": true,
+                "data": "0\\x00",
+                "name": "basicConstraints"
+              },
+              {
+                "data": "\\x04\\x14\\xc5h\\x06\\xec\\xef\\x15\\x9e\\x7f\\xdb\\xa0#*\\xa8\\x01\\'\\xed\\xed\\xd8Rm",
+                "name": "subjectKeyIdentifier"
+              },
+              {
+                "data": "0\\x16\\x80\\x14\\xde\\x1b\\x1e\\xedy\\x15\\xd4>7$\\xc3!\\xbb\\xec49mB\\xb20",
+                "name": "authorityKeyIdentifier"
+              },
+              {
+                "data": "0J0!\\x06\\x08+\\x06\\x01\\x05\\x05\\x070\\x01\\x86\\x15http://o.pki.goog/wr20%\\x06\\x08+\\x06\\x01\\x05\\x05\\x070\\x02\\x86\\x19http://i.pki.goog/wr2.crt",
+                "name": "authorityInfoAccess"
+              },
+              {
+                "data": "0\\x81\\xa1\\x82\\ndns.google\\x82\\x0edns.google.com\\x82\\x10*.dns.google.com\\x82\\x0b8888.google\\x82\\x10dns64.dns.google\\x87\\x04\\x08\\x08\\x08\\x08\\x87\\x04\\x08\\x08\\x04\\x04\\x87\\x10 \\x01H`H`\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x88\\x88\\x87\\x10 \\x01H`H`\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x88D\\x87\\x10 \\x01H`H`\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00dd\\x87\\x10 \\x01H`H`\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00d",
+                "name": "subjectAltName"
+              },
+              {
+                "data": "0\\n0\\x08\\x06\\x06g\\x81\\x0c\\x01\\x02\\x01",
+                "name": "certificatePolicies"
+              },
+              {
+                "data": "0-0+\\xa0)\\xa0\\'\\x86%http://c.pki.goog/wr2/75r4ZyA3vA0.crl",
+                "name": "crlDistributionPoints"
+              },
+              {
+                "data": "\\x04\\x81\\xf2\\x00\\xf0\\x00w\\x00H\\xb0\\xe3k\\xda\\xa6G4\\x0f\\xe5j\\x02\\xfa\\x9d0\\xeb\\x1cR\\x01\\xcbV\\xdd,\\x81\\xd9\\xbb\\xbf\\xab9\\xd8\\x84s\\x00\\x00\\x01\\x8f\\x9a\\x11\\x1f\\x88\\x00\\x00\\x04\\x03\\x00H0F\\x02!\\x00\\xd6n\\x08\\xc8\\xeb\\x17\\xb0\\xe4?\\xb7\\x84\\x16ssrM\\xcae?\\xe2\\xffd\\xbe\\x83p\\xbf\\xda\\xccU\\xe8\\xbdQ\\x02!\\x00\\xc5G5\\xa7\\x10\\x9du\\xfa\\xe6_\\xec\\x05\\xb9\\xb8\\xd4\\x8d\\xb1\\xa4\\xf9\\xfd$L\\x93x\\xc0\\x0b\\xb8l\\xaf\\x1eZ\\x8a\\x00u\\x00v\\xff\\x88?\\n\\xb6\\xfb\\x95Q\\xc2a\\xcc\\xf5\\x87\\xba4\\xb4\\xa4\\xcd\\xbb)\\xdchB\\n\\x9f\\xe6gLZ:t\\x00\\x00\\x01\\x8f\\x9a\\x11\\x1f\\x98\\x00\\x00\\x04\\x03\\x00F0D\\x02 a\\xc5\\xbfFf\\x1cD\"\\x02\\xcc\\xac`.UZ\\riv\\x91\\xce\\x02H8\\xa3<\\x84b\\xa3\\x1bX0G\\x02 \\x1f\\x86\\x0c\\xdew;\\xc8\\xcd8\\xb67r\\x0be[\\xcc]\\xa9\\xf0\\x17\\xa8v\\x90\\xc2\\xd480\\xa58_\\x87\\xa4",
+                "name": "ct_precert_scts"
+              }
+            ],
+            "fingerprint": {
+              "sha256": "6c9a54d8fc9348cf2a71add9e9c36333e912b2f3af35e302291312d4f2af809b",
+              "sha1": "7a1a8752973c2f448dbf7b1af22a874f9e3f518b"
+            },
+            "serial": 34195950749951363561031343634211944341,
+            "subject": {
+              "CN": "dns.google"
+            },
+            "pubkey": {
+              "type": "rsa",
+              "bits": 2048
+            },
+            "issuer": {
+              "C": "US",
+              "CN": "WR2",
+              "O": "Google Trust Services"
+            }
+          },
+          "cipher": {
+            "version": "TLSv1.3",
+            "bits": 256,
+            "name": "TLS_AES_256_GCM_SHA384"
+          },
+          "trust": {
+            "revoked": false,
+            "browser": null
+          },
+          "handshake_states": [
+            "before SSL initialization",
+            "SSLv3/TLS write client hello",
+            "SSLv3/TLS read server hello",
+            "TLSv1.3 read encrypted extensions",
+            "SSLv3/TLS read server certificate",
+            "TLSv1.3 read server certificate verify",
+            "SSLv3/TLS read finished",
+            "SSLv3/TLS write change cipher spec",
+            "SSLv3/TLS write finished",
+            "SSL negotiation finished successfully"
+          ],
+          "alpn": [],
+          "ocsp": {}
+        },
+        "hostnames": [
+          "dns.google"
+        ],
+        "location": {
+          "city": "Mountain View",
+          "region_code": "CA",
+          "area_code": null,
+          "longitude": -122.0775,
+          "country_name": "United States",
+          "country_code": "US",
+          "latitude": 37.4056
+        },
+        "ip": 134744072,
+        "domains": [
+          "dns.google"
+        ],
+        "hash": 1481166417,
+        "os": null,
+        "asn": "AS15169",
+        "transport": "tcp",
+        "ip_str": "8.8.8.8"
+      }
+    ],
+    "asn": "AS15169",
+    "ip_str": "8.8.8.8"
+  }
+}
+20:01:11.525 | INFO    | Task run 'aggregate_results-0' - Finished in state Completed()
+20:01:11.760 | INFO    | Action run 'foamy-cat' - Finished in state Completed()
+(myenv) PS C:\Users\justi\Documents\GitHub\WebTrey\webtrey-dashboard\backend\webtrey\giza>
+
+
+https://actions-server-jeytuan-dblzzhtf5q-ew.a.run.app/flow-runs/flow-run/c58908cb-87a7-4f6f-9999-903e6ec15990?tab=Logs

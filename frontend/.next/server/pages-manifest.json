@@ -3,10 +3,8 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/bounties": "pages/bounties.js",
-  "/dashboard": "pages/dashboard.js",
-  "/vuln-scan": "pages/vuln-scan.js",
-  "/api/vuln-scan": "pages/api/vuln-scan.js",
   "/hunting": "pages/hunting.js",
+  "/bounties": "pages/bounties.js",
+  "/vuln-scan": "pages/vuln-scan.js",
   "/bounties/zkSync": "pages/bounties/zkSync.js"
 }
