@@ -2,9 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
   "/hunting": "pages/hunting.js",
-  "/bounties": "pages/bounties.js",
-  "/vuln-scan": "pages/vuln-scan.js",
-  "/bounties/zkSync": "pages/bounties/zkSync.js"
+  "/bounties/zkSync": "pages/bounties/zkSync.js",
+  "/dashboard": "pages/dashboard.js",
+  "/ai-agents": "pages/ai-agents.js",
+  "/vuln-scan": "pages/vuln-scan.js"
 }
